@@ -12,8 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using System.Windows.Forms;
-using System.Drawing;
 
 namespace NFe_SeniorSistemas
 {
