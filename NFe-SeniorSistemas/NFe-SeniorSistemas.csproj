@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\BdDados.cs" />
+    <Compile Include="Classes\NFe.cs" />
     <Compile Include="Forms\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>

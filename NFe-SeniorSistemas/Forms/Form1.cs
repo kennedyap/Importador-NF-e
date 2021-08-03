@@ -66,8 +66,11 @@ namespace NFe_SeniorSistemas
         private void lblCadastro_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Cadastro frmCadastro = new Cadastro();
-            frmCadastro.Show();
+            //Cadastro frmCadastro = new Cadastro();
+            //frmCadastro.Show();
+
+            Principal pr = new Principal();
+            pr.Show();
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
