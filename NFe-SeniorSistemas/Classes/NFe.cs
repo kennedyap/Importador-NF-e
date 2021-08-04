@@ -17,6 +17,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcProtNFe protNFeField;
 
+        private string[] textField;
+
         private decimal versaoField;
 
         /// <remarks/>
@@ -46,6 +48,20 @@ namespace NFe_SeniorSistemas.Classes
         }
 
         /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public decimal versao
         {
@@ -70,6 +86,8 @@ namespace NFe_SeniorSistemas.Classes
         private nfeProcNFeInfNFe infNFeField;
 
         private Signature signatureField;
+
+        private string[] textField;
 
         /// <remarks/>
         public nfeProcNFeInfNFe infNFe
@@ -97,6 +115,20 @@ namespace NFe_SeniorSistemas.Classes
                 this.signatureField = value;
             }
         }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -112,7 +144,7 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeDest destField;
 
-        private nfeProcNFeInfNFeDet detField;
+        private nfeProcNFeInfNFeDet[] detField;
 
         private nfeProcNFeInfNFeTotal totalField;
 
@@ -126,9 +158,11 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeInfRespTec infRespTecField;
 
-        private string idField;
+        private string[] textField;
 
         private decimal versaoField;
+
+        private string idField;
 
         /// <remarks/>
         public nfeProcNFeInfNFeIde ide
@@ -170,7 +204,8 @@ namespace NFe_SeniorSistemas.Classes
         }
 
         /// <remarks/>
-        public nfeProcNFeInfNFeDet det
+        [System.Xml.Serialization.XmlElementAttribute("det")]
+        public nfeProcNFeInfNFeDet[] det
         {
             get
             {
@@ -261,16 +296,16 @@ namespace NFe_SeniorSistemas.Classes
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string Id
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
         {
             get
             {
-                return this.idField;
+                return this.textField;
             }
             set
             {
-                this.idField = value;
+                this.textField = value;
             }
         }
 
@@ -285,6 +320,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.versaoField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Id
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
             }
         }
     }
@@ -603,6 +652,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private byte cRTField;
 
+        private string[] textField;
+
         /// <remarks/>
         public ulong CNPJ
         {
@@ -691,6 +742,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.cRTField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -838,6 +903,7 @@ namespace NFe_SeniorSistemas.Classes
                 this.xPaisField = value;
             }
         }
+
         public string xFone
         {
             get
@@ -866,6 +932,10 @@ namespace NFe_SeniorSistemas.Classes
 
         private byte indIEDestField;
 
+        private string[] textField;
+
+        private string xEmailField;
+
         /// <remarks/>
         public ulong CPF
         {
@@ -876,6 +946,18 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.cPFField = value;
+            }
+        }
+
+        public string xEmail
+        {
+            get
+            {
+                return this.xEmailField;
+            }
+            set
+            {
+                this.xEmailField = value;
             }
         }
 
@@ -915,6 +997,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.indIEDestField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -1088,6 +1184,10 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeDetImposto impostoField;
 
+        private string infAdProdField;
+
+        private string[] textField;
+
         private byte nItemField;
 
         /// <remarks/>
@@ -1113,6 +1213,33 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.impostoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string infAdProd
+        {
+            get
+            {
+                return this.infAdProdField;
+            }
+            set
+            {
+                this.infAdProdField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
 
@@ -1398,6 +1525,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeDetImpostoICMSUFDest iCMSUFDestField;
 
+        private string[] textField;
+
         /// <remarks/>
         public decimal vTotTrib
         {
@@ -1475,6 +1604,20 @@ namespace NFe_SeniorSistemas.Classes
                 this.iCMSUFDestField = value;
             }
         }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -1486,6 +1629,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeDetImpostoICMSICMS00 iCMS00Field;
 
+        private string[] textField;
+
         /// <remarks/>
         public nfeProcNFeInfNFeDetImpostoICMSICMS00 ICMS00
         {
@@ -1496,6 +1641,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.iCMS00Field = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -1609,6 +1768,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeDetImpostoIPIIPINT iPINTField;
 
+        private string[] textField;
+
         /// <remarks/>
         public ushort cEnq
         {
@@ -1632,6 +1793,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.iPINTField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -1668,6 +1843,10 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeDetImpostoPISPISAliq pISAliqField;
 
+        private nfeProcNFeInfNFeDetImpostoPISPISNT pISNTField;
+
+        private string[] textField;
+
         /// <remarks/>
         public nfeProcNFeInfNFeDetImpostoPISPISAliq PISAliq
         {
@@ -1678,6 +1857,33 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.pISAliqField = value;
+            }
+        }
+
+        /// <remarks/>
+        public nfeProcNFeInfNFeDetImpostoPISPISNT PISNT
+        {
+            get
+            {
+                return this.pISNTField;
+            }
+            set
+            {
+                this.pISNTField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -1754,10 +1960,37 @@ namespace NFe_SeniorSistemas.Classes
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
+    public partial class nfeProcNFeInfNFeDetImpostoPISPISNT
+    {
+
+        private byte cSTField;
+
+        /// <remarks/>
+        public byte CST
+        {
+            get
+            {
+                return this.cSTField;
+            }
+            set
+            {
+                this.cSTField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
     public partial class nfeProcNFeInfNFeDetImpostoCOFINS
     {
 
         private nfeProcNFeInfNFeDetImpostoCOFINSCOFINSAliq cOFINSAliqField;
+
+        private nfeProcNFeInfNFeDetImpostoCOFINSCOFINSNT cOFINSNTField;
+
+        private string[] textField;
 
         /// <remarks/>
         public nfeProcNFeInfNFeDetImpostoCOFINSCOFINSAliq COFINSAliq
@@ -1769,6 +2002,33 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.cOFINSAliqField = value;
+            }
+        }
+
+        /// <remarks/>
+        public nfeProcNFeInfNFeDetImpostoCOFINSCOFINSNT COFINSNT
+        {
+            get
+            {
+                return this.cOFINSNTField;
+            }
+            set
+            {
+                this.cOFINSNTField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -1837,6 +2097,29 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.vCOFINSField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
+    public partial class nfeProcNFeInfNFeDetImpostoCOFINSCOFINSNT
+    {
+
+        private byte cSTField;
+
+        /// <remarks/>
+        public byte CST
+        {
+            get
+            {
+                return this.cSTField;
+            }
+            set
+            {
+                this.cSTField = value;
             }
         }
     }
@@ -1993,6 +2276,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeTotalICMSTot iCMSTotField;
 
+        private string[] textField;
+
         /// <remarks/>
         public nfeProcNFeInfNFeTotalICMSTot ICMSTot
         {
@@ -2003,6 +2288,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.iCMSTotField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -2407,6 +2706,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFePagDetPag detPagField;
 
+        private string[] textField;
+
         /// <remarks/>
         public nfeProcNFeInfNFePagDetPag detPag
         {
@@ -2417,6 +2718,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.detPagField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -2487,6 +2802,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcNFeInfNFeInfAdicObsCont obsContField;
 
+        private string[] textField;
+
         /// <remarks/>
         public string infAdFisco
         {
@@ -2523,6 +2840,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.obsContField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -2648,6 +2979,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private SignatureKeyInfo keyInfoField;
 
+        private string[] textField;
+
         /// <remarks/>
         public SignatureSignedInfo SignedInfo
         {
@@ -2686,6 +3019,20 @@ namespace NFe_SeniorSistemas.Classes
                 this.keyInfoField = value;
             }
         }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -2700,6 +3047,8 @@ namespace NFe_SeniorSistemas.Classes
         private SignatureSignedInfoSignatureMethod signatureMethodField;
 
         private SignatureSignedInfoReference referenceField;
+
+        private string[] textField;
 
         /// <remarks/>
         public SignatureSignedInfoCanonicalizationMethod CanonicalizationMethod
@@ -2737,6 +3086,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.referenceField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -2802,6 +3165,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private string digestValueField;
 
+        private string[] textField;
+
         private string uRIField;
 
         /// <remarks/>
@@ -2841,6 +3206,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.digestValueField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
 
@@ -2916,6 +3295,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private SignatureKeyInfoX509Data x509DataField;
 
+        private string[] textField;
+
         /// <remarks/>
         public SignatureKeyInfoX509Data X509Data
         {
@@ -2926,6 +3307,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.x509DataField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
     }
@@ -2962,6 +3357,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private nfeProcProtNFeInfProt infProtField;
 
+        private string[] textField;
+
         private decimal versaoField;
 
         /// <remarks/>
@@ -2974,6 +3371,20 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.infProtField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
             }
         }
 
@@ -3120,4 +3531,6 @@ namespace NFe_SeniorSistemas.Classes
             }
         }
     }
+
+
 }

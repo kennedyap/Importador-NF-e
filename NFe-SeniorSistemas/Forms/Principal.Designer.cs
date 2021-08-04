@@ -34,8 +34,8 @@
             this.txtXML = new System.Windows.Forms.TextBox();
             this.gpXml = new System.Windows.Forms.GroupBox();
             this.gpNFe = new System.Windows.Forms.GroupBox();
-            this.tbEmitente = new System.Windows.Forms.TabControl();
-            this.tbEmit = new System.Windows.Forms.TabPage();
+            this.tabGeral = new System.Windows.Forms.TabControl();
+            this.tbEmitente = new System.Windows.Forms.TabPage();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblCodRegTrib = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.lblPais = new System.Windows.Forms.Label();
             this.lblUF = new System.Windows.Forms.Label();
             this.lblCep = new System.Windows.Forms.Label();
+            this.lblIE = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             this.txtEmitUF = new System.Windows.Forms.TextBox();
             this.txtEmitBairro = new System.Windows.Forms.TextBox();
             this.txtEmitMun = new System.Windows.Forms.TextBox();
+            this.txtEmitIE = new System.Windows.Forms.TextBox();
             this.txtEmitCdRegTrib = new System.Windows.Forms.TextBox();
             this.txtEmitPais = new System.Windows.Forms.TextBox();
             this.txtEmitMunOcorrFGICMS = new System.Windows.Forms.TextBox();
@@ -63,15 +65,16 @@
             this.txtEmitNomeF = new System.Windows.Forms.TextBox();
             this.txtEmitNome = new System.Windows.Forms.TextBox();
             this.tbDest = new System.Windows.Forms.TabPage();
+            this.txtDestComplemento = new System.Windows.Forms.TextBox();
+            this.lblComplemento = new System.Windows.Forms.Label();
+            this.txtDestNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblIndIE = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -80,86 +83,15 @@
             this.txtDestEnd = new System.Windows.Forms.TextBox();
             this.txtDestTel = new System.Windows.Forms.TextBox();
             this.txtDestCEp = new System.Windows.Forms.TextBox();
-            this.txtIE = new System.Windows.Forms.TextBox();
             this.txtDestUF = new System.Windows.Forms.TextBox();
-            this.txtDEstBairro = new System.Windows.Forms.TextBox();
+            this.txtDestBairro = new System.Windows.Forms.TextBox();
             this.txtDestMun = new System.Windows.Forms.TextBox();
-            this.lblDestEmail = new System.Windows.Forms.TextBox();
-            this.txtIndIE = new System.Windows.Forms.TextBox();
-            this.txtIM = new System.Windows.Forms.TextBox();
+            this.txtDestEmail = new System.Windows.Forms.TextBox();
+            this.txtDestIndIE = new System.Windows.Forms.TextBox();
             this.txtDestPais = new System.Windows.Forms.TextBox();
-            this.txtSUFRAMA = new System.Windows.Forms.TextBox();
             this.txtDestCPF = new System.Windows.Forms.TextBox();
             this.txtDestNome = new System.Windows.Forms.TextBox();
             this.tbProd = new System.Windows.Forms.TabPage();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txProdQuant9 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.txtProdNum9 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc9 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr9 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom9 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txProdQuant8 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.txtProdNum8 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc8 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr8 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom8 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txProdQuant7 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.txtProdNum7 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc7 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr7 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom7 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txProdQuant6 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.txtProdNum6 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc6 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr6 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom6 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txProdQuant5 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtProdNum5 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc5 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr5 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom5 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txProdQuant4 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtProdNum4 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc4 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr4 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom4 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txProdQuant3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtProdNum3 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc3 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr3 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom3 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txProdQuant2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtProdNum2 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc2 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr2 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom2 = new System.Windows.Forms.TextBox();
-            this.PanelProd1 = new System.Windows.Forms.Panel();
-            this.txProdQuant1 = new System.Windows.Forms.TextBox();
-            this.btnExp = new System.Windows.Forms.Button();
-            this.txtProdNum1 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc1 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr1 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom1 = new System.Windows.Forms.TextBox();
-            this.lblDesc = new System.Windows.Forms.Label();
-            this.LblQtd = new System.Windows.Forms.Label();
-            this.lblUnCom = new System.Windows.Forms.Label();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.lblNum = new System.Windows.Forms.Label();
             this.tbTot = new System.Windows.Forms.TabPage();
             this.gpTot = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -222,23 +154,18 @@
             this.gpTransp = new System.Windows.Forms.GroupBox();
             this.txtModFrete = new System.Windows.Forms.TextBox();
             this.lblModalidadeFrete = new System.Windows.Forms.Label();
-            this.lblIE = new System.Windows.Forms.Label();
-            this.txtEmitIE = new System.Windows.Forms.TextBox();
+            this.lstProdutos = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.quantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vlrUnitario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vlrTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gpXml.SuspendLayout();
             this.gpNFe.SuspendLayout();
+            this.tabGeral.SuspendLayout();
             this.tbEmitente.SuspendLayout();
-            this.tbEmit.SuspendLayout();
             this.tbDest.SuspendLayout();
             this.tbProd.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.PanelProd1.SuspendLayout();
             this.tbTot.SuspendLayout();
             this.gpTot.SuspendLayout();
             this.tbInfAdc.SuspendLayout();
@@ -283,7 +210,7 @@
             // 
             // gpNFe
             // 
-            this.gpNFe.Controls.Add(this.tbEmitente);
+            this.gpNFe.Controls.Add(this.tabGeral);
             this.gpNFe.Location = new System.Drawing.Point(12, 81);
             this.gpNFe.Name = "gpNFe";
             this.gpNFe.Size = new System.Drawing.Size(645, 542);
@@ -291,58 +218,58 @@
             this.gpNFe.TabStop = false;
             this.gpNFe.Text = "NF-e";
             // 
+            // tabGeral
+            // 
+            this.tabGeral.Controls.Add(this.tbEmitente);
+            this.tabGeral.Controls.Add(this.tbDest);
+            this.tabGeral.Controls.Add(this.tbProd);
+            this.tabGeral.Controls.Add(this.tbTot);
+            this.tabGeral.Controls.Add(this.tbInfAdc);
+            this.tabGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGeral.Location = new System.Drawing.Point(7, 22);
+            this.tabGeral.Name = "tabGeral";
+            this.tabGeral.SelectedIndex = 0;
+            this.tabGeral.Size = new System.Drawing.Size(638, 514);
+            this.tabGeral.TabIndex = 0;
+            // 
             // tbEmitente
             // 
-            this.tbEmitente.Controls.Add(this.tbEmit);
-            this.tbEmitente.Controls.Add(this.tbDest);
-            this.tbEmitente.Controls.Add(this.tbProd);
-            this.tbEmitente.Controls.Add(this.tbTot);
-            this.tbEmitente.Controls.Add(this.tbInfAdc);
-            this.tbEmitente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmitente.Location = new System.Drawing.Point(7, 22);
+            this.tbEmitente.Controls.Add(this.lblTelefone);
+            this.tbEmitente.Controls.Add(this.lblCodRegTrib);
+            this.tbEmitente.Controls.Add(this.label10);
+            this.tbEmitente.Controls.Add(this.IESubstitutoTributario);
+            this.tbEmitente.Controls.Add(this.lblPais);
+            this.tbEmitente.Controls.Add(this.lblUF);
+            this.tbEmitente.Controls.Add(this.lblCep);
+            this.tbEmitente.Controls.Add(this.lblIE);
+            this.tbEmitente.Controls.Add(this.label3);
+            this.tbEmitente.Controls.Add(this.lblBairro);
+            this.tbEmitente.Controls.Add(this.lblEndereco);
+            this.tbEmitente.Controls.Add(this.lblCnpj);
+            this.tbEmitente.Controls.Add(this.lblNFantasia);
+            this.tbEmitente.Controls.Add(this.lblNome);
+            this.tbEmitente.Controls.Add(this.txtEmitEnd);
+            this.tbEmitente.Controls.Add(this.txtEmitTel);
+            this.tbEmitente.Controls.Add(this.txtEmitCEP);
+            this.tbEmitente.Controls.Add(this.txtEmitIETrib);
+            this.tbEmitente.Controls.Add(this.txtEmitUF);
+            this.tbEmitente.Controls.Add(this.txtEmitBairro);
+            this.tbEmitente.Controls.Add(this.txtEmitMun);
+            this.tbEmitente.Controls.Add(this.txtEmitIE);
+            this.tbEmitente.Controls.Add(this.txtEmitCdRegTrib);
+            this.tbEmitente.Controls.Add(this.txtEmitPais);
+            this.tbEmitente.Controls.Add(this.txtEmitMunOcorrFGICMS);
+            this.tbEmitente.Controls.Add(this.txtEmitCNPJ);
+            this.tbEmitente.Controls.Add(this.txtEmitNomeF);
+            this.tbEmitente.Controls.Add(this.txtEmitNome);
+            this.tbEmitente.Location = new System.Drawing.Point(4, 29);
             this.tbEmitente.Name = "tbEmitente";
-            this.tbEmitente.SelectedIndex = 0;
-            this.tbEmitente.Size = new System.Drawing.Size(638, 514);
+            this.tbEmitente.Padding = new System.Windows.Forms.Padding(3);
+            this.tbEmitente.Size = new System.Drawing.Size(630, 481);
             this.tbEmitente.TabIndex = 0;
-            // 
-            // tbEmit
-            // 
-            this.tbEmit.Controls.Add(this.lblTelefone);
-            this.tbEmit.Controls.Add(this.lblCodRegTrib);
-            this.tbEmit.Controls.Add(this.label10);
-            this.tbEmit.Controls.Add(this.IESubstitutoTributario);
-            this.tbEmit.Controls.Add(this.lblPais);
-            this.tbEmit.Controls.Add(this.lblUF);
-            this.tbEmit.Controls.Add(this.lblCep);
-            this.tbEmit.Controls.Add(this.lblIE);
-            this.tbEmit.Controls.Add(this.label3);
-            this.tbEmit.Controls.Add(this.lblBairro);
-            this.tbEmit.Controls.Add(this.lblEndereco);
-            this.tbEmit.Controls.Add(this.lblCnpj);
-            this.tbEmit.Controls.Add(this.lblNFantasia);
-            this.tbEmit.Controls.Add(this.lblNome);
-            this.tbEmit.Controls.Add(this.txtEmitEnd);
-            this.tbEmit.Controls.Add(this.txtEmitTel);
-            this.tbEmit.Controls.Add(this.txtEmitCEP);
-            this.tbEmit.Controls.Add(this.txtEmitIETrib);
-            this.tbEmit.Controls.Add(this.txtEmitUF);
-            this.tbEmit.Controls.Add(this.txtEmitBairro);
-            this.tbEmit.Controls.Add(this.txtEmitMun);
-            this.tbEmit.Controls.Add(this.txtEmitIE);
-            this.tbEmit.Controls.Add(this.txtEmitCdRegTrib);
-            this.tbEmit.Controls.Add(this.txtEmitPais);
-            this.tbEmit.Controls.Add(this.txtEmitMunOcorrFGICMS);
-            this.tbEmit.Controls.Add(this.txtEmitCNPJ);
-            this.tbEmit.Controls.Add(this.txtEmitNomeF);
-            this.tbEmit.Controls.Add(this.txtEmitNome);
-            this.tbEmit.Location = new System.Drawing.Point(4, 29);
-            this.tbEmit.Name = "tbEmit";
-            this.tbEmit.Padding = new System.Windows.Forms.Padding(3);
-            this.tbEmit.Size = new System.Drawing.Size(630, 481);
-            this.tbEmit.TabIndex = 0;
-            this.tbEmit.Text = "Emitente";
-            this.tbEmit.UseVisualStyleBackColor = true;
-            this.tbEmit.Click += new System.EventHandler(this.tbEmit_Click);
+            this.tbEmitente.Text = "Emitente";
+            this.tbEmitente.UseVisualStyleBackColor = true;
+            this.tbEmitente.Click += new System.EventHandler(this.tbEmit_Click);
             // 
             // lblTelefone
             // 
@@ -406,6 +333,15 @@
             this.lblCep.Size = new System.Drawing.Size(43, 20);
             this.lblCep.TabIndex = 23;
             this.lblCep.Text = "CEP";
+            // 
+            // lblIE
+            // 
+            this.lblIE.AutoSize = true;
+            this.lblIE.Location = new System.Drawing.Point(14, 243);
+            this.lblIE.Name = "lblIE";
+            this.lblIE.Size = new System.Drawing.Size(24, 20);
+            this.lblIE.TabIndex = 22;
+            this.lblIE.Text = "IE";
             // 
             // label3
             // 
@@ -517,6 +453,14 @@
             this.txtEmitMun.Size = new System.Drawing.Size(265, 26);
             this.txtEmitMun.TabIndex = 8;
             // 
+            // txtEmitIE
+            // 
+            this.txtEmitIE.Location = new System.Drawing.Point(86, 235);
+            this.txtEmitIE.Name = "txtEmitIE";
+            this.txtEmitIE.ReadOnly = true;
+            this.txtEmitIE.Size = new System.Drawing.Size(265, 26);
+            this.txtEmitIE.TabIndex = 6;
+            // 
             // txtEmitCdRegTrib
             // 
             this.txtEmitCdRegTrib.Location = new System.Drawing.Point(288, 393);
@@ -567,15 +511,16 @@
             // 
             // tbDest
             // 
+            this.tbDest.Controls.Add(this.txtDestComplemento);
+            this.tbDest.Controls.Add(this.lblComplemento);
+            this.tbDest.Controls.Add(this.txtDestNumero);
+            this.tbDest.Controls.Add(this.lblNumero);
             this.tbDest.Controls.Add(this.label1);
             this.tbDest.Controls.Add(this.label2);
-            this.tbDest.Controls.Add(this.label4);
-            this.tbDest.Controls.Add(this.label5);
-            this.tbDest.Controls.Add(this.label6);
             this.tbDest.Controls.Add(this.label8);
             this.tbDest.Controls.Add(this.label9);
             this.tbDest.Controls.Add(this.label11);
-            this.tbDest.Controls.Add(this.label12);
+            this.tbDest.Controls.Add(this.lblIndIE);
             this.tbDest.Controls.Add(this.label13);
             this.tbDest.Controls.Add(this.label14);
             this.tbDest.Controls.Add(this.label15);
@@ -584,15 +529,12 @@
             this.tbDest.Controls.Add(this.txtDestEnd);
             this.tbDest.Controls.Add(this.txtDestTel);
             this.tbDest.Controls.Add(this.txtDestCEp);
-            this.tbDest.Controls.Add(this.txtIE);
             this.tbDest.Controls.Add(this.txtDestUF);
-            this.tbDest.Controls.Add(this.txtDEstBairro);
+            this.tbDest.Controls.Add(this.txtDestBairro);
             this.tbDest.Controls.Add(this.txtDestMun);
-            this.tbDest.Controls.Add(this.lblDestEmail);
-            this.tbDest.Controls.Add(this.txtIndIE);
-            this.tbDest.Controls.Add(this.txtIM);
+            this.tbDest.Controls.Add(this.txtDestEmail);
+            this.tbDest.Controls.Add(this.txtDestIndIE);
             this.tbDest.Controls.Add(this.txtDestPais);
-            this.tbDest.Controls.Add(this.txtSUFRAMA);
             this.tbDest.Controls.Add(this.txtDestCPF);
             this.tbDest.Controls.Add(this.txtDestNome);
             this.tbDest.Location = new System.Drawing.Point(4, 29);
@@ -603,10 +545,44 @@
             this.tbDest.Text = "Destinatário";
             this.tbDest.UseVisualStyleBackColor = true;
             // 
+            // txtDestComplemento
+            // 
+            this.txtDestComplemento.Location = new System.Drawing.Point(86, 330);
+            this.txtDestComplemento.Name = "txtDestComplemento";
+            this.txtDestComplemento.ReadOnly = true;
+            this.txtDestComplemento.Size = new System.Drawing.Size(265, 26);
+            this.txtDestComplemento.TabIndex = 67;
+            // 
+            // lblComplemento
+            // 
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Location = new System.Drawing.Point(6, 330);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(61, 20);
+            this.lblComplemento.TabIndex = 66;
+            this.lblComplemento.Text = "Compl.";
+            // 
+            // txtDestNumero
+            // 
+            this.txtDestNumero.Location = new System.Drawing.Point(518, 295);
+            this.txtDestNumero.Name = "txtDestNumero";
+            this.txtDestNumero.ReadOnly = true;
+            this.txtDestNumero.Size = new System.Drawing.Size(100, 26);
+            this.txtDestNumero.TabIndex = 65;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(371, 295);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(31, 20);
+            this.lblNumero.TabIndex = 64;
+            this.lblNumero.Text = "Nr.";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 111);
+            this.label1.Location = new System.Drawing.Point(9, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 20);
             this.label1.TabIndex = 63;
@@ -615,43 +591,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 76);
+            this.label2.Location = new System.Drawing.Point(9, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 62;
             this.label2.Text = "E-mail";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 383);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 20);
-            this.label4.TabIndex = 61;
-            this.label4.Text = "IM";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 351);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 20);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Inscrição SUFRAMA";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 319);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 20);
-            this.label6.TabIndex = 59;
-            this.label6.Text = "Inscrição Estadual";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(374, 277);
+            this.label8.Location = new System.Drawing.Point(371, 367);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 20);
             this.label8.TabIndex = 57;
@@ -660,7 +609,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(374, 245);
+            this.label9.Location = new System.Drawing.Point(371, 330);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 20);
             this.label9.TabIndex = 56;
@@ -669,25 +618,25 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(374, 213);
+            this.label11.Location = new System.Drawing.Point(371, 260);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 20);
             this.label11.TabIndex = 55;
             this.label11.Text = "CEP";
             // 
-            // label12
+            // lblIndIE
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 280);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 20);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "IE";
+            this.lblIndIE.AutoSize = true;
+            this.lblIndIE.Location = new System.Drawing.Point(6, 367);
+            this.lblIndIE.Name = "lblIndIE";
+            this.lblIndIE.Size = new System.Drawing.Size(55, 20);
+            this.lblIndIE.TabIndex = 54;
+            this.lblIndIE.Text = "Ind. IE";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 248);
+            this.label13.Location = new System.Drawing.Point(6, 295);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 20);
             this.label13.TabIndex = 53;
@@ -696,7 +645,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 210);
+            this.label14.Location = new System.Drawing.Point(6, 257);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 20);
             this.label14.TabIndex = 52;
@@ -705,7 +654,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 178);
+            this.label15.Location = new System.Drawing.Point(6, 225);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 20);
             this.label15.TabIndex = 51;
@@ -731,7 +680,7 @@
             // 
             // txtDestEnd
             // 
-            this.txtDestEnd.Location = new System.Drawing.Point(89, 178);
+            this.txtDestEnd.Location = new System.Drawing.Point(86, 225);
             this.txtDestEnd.Name = "txtDestEnd";
             this.txtDestEnd.ReadOnly = true;
             this.txtDestEnd.Size = new System.Drawing.Size(532, 26);
@@ -747,83 +696,60 @@
             // 
             // txtDestCEp
             // 
-            this.txtDestCEp.Location = new System.Drawing.Point(422, 210);
+            this.txtDestCEp.Location = new System.Drawing.Point(419, 257);
             this.txtDestCEp.Name = "txtDestCEp";
             this.txtDestCEp.ReadOnly = true;
             this.txtDestCEp.Size = new System.Drawing.Size(199, 26);
             this.txtDestCEp.TabIndex = 45;
             // 
-            // txtIE
-            // 
-            this.txtIE.Location = new System.Drawing.Point(291, 316);
-            this.txtIE.Name = "txtIE";
-            this.txtIE.ReadOnly = true;
-            this.txtIE.Size = new System.Drawing.Size(330, 26);
-            this.txtIE.TabIndex = 44;
-            // 
             // txtDestUF
             // 
-            this.txtDestUF.Location = new System.Drawing.Point(521, 242);
+            this.txtDestUF.Location = new System.Drawing.Point(518, 330);
             this.txtDestUF.Name = "txtDestUF";
             this.txtDestUF.ReadOnly = true;
             this.txtDestUF.Size = new System.Drawing.Size(100, 26);
             this.txtDestUF.TabIndex = 42;
             // 
-            // txtDEstBairro
+            // txtDestBairro
             // 
-            this.txtDEstBairro.Location = new System.Drawing.Point(89, 210);
-            this.txtDEstBairro.Name = "txtDEstBairro";
-            this.txtDEstBairro.ReadOnly = true;
-            this.txtDEstBairro.Size = new System.Drawing.Size(265, 26);
-            this.txtDEstBairro.TabIndex = 41;
+            this.txtDestBairro.Location = new System.Drawing.Point(86, 257);
+            this.txtDestBairro.Name = "txtDestBairro";
+            this.txtDestBairro.ReadOnly = true;
+            this.txtDestBairro.Size = new System.Drawing.Size(265, 26);
+            this.txtDestBairro.TabIndex = 41;
             // 
             // txtDestMun
             // 
-            this.txtDestMun.Location = new System.Drawing.Point(89, 242);
+            this.txtDestMun.Location = new System.Drawing.Point(86, 295);
             this.txtDestMun.Name = "txtDestMun";
             this.txtDestMun.ReadOnly = true;
             this.txtDestMun.Size = new System.Drawing.Size(265, 26);
             this.txtDestMun.TabIndex = 40;
             // 
-            // lblDestEmail
+            // txtDestEmail
             // 
-            this.lblDestEmail.Location = new System.Drawing.Point(89, 73);
-            this.lblDestEmail.Name = "lblDestEmail";
-            this.lblDestEmail.ReadOnly = true;
-            this.lblDestEmail.Size = new System.Drawing.Size(339, 26);
-            this.lblDestEmail.TabIndex = 39;
+            this.txtDestEmail.Location = new System.Drawing.Point(89, 73);
+            this.txtDestEmail.Name = "txtDestEmail";
+            this.txtDestEmail.ReadOnly = true;
+            this.txtDestEmail.Size = new System.Drawing.Size(339, 26);
+            this.txtDestEmail.TabIndex = 39;
             // 
-            // txtIndIE
+            // txtDestIndIE
             // 
-            this.txtIndIE.Location = new System.Drawing.Point(89, 274);
-            this.txtIndIE.Name = "txtIndIE";
-            this.txtIndIE.ReadOnly = true;
-            this.txtIndIE.Size = new System.Drawing.Size(265, 26);
-            this.txtIndIE.TabIndex = 38;
-            // 
-            // txtIM
-            // 
-            this.txtIM.Location = new System.Drawing.Point(291, 380);
-            this.txtIM.Name = "txtIM";
-            this.txtIM.ReadOnly = true;
-            this.txtIM.Size = new System.Drawing.Size(330, 26);
-            this.txtIM.TabIndex = 37;
+            this.txtDestIndIE.Location = new System.Drawing.Point(86, 364);
+            this.txtDestIndIE.Multiline = true;
+            this.txtDestIndIE.Name = "txtDestIndIE";
+            this.txtDestIndIE.ReadOnly = true;
+            this.txtDestIndIE.Size = new System.Drawing.Size(265, 111);
+            this.txtDestIndIE.TabIndex = 38;
             // 
             // txtDestPais
             // 
-            this.txtDestPais.Location = new System.Drawing.Point(422, 274);
+            this.txtDestPais.Location = new System.Drawing.Point(419, 364);
             this.txtDestPais.Name = "txtDestPais";
             this.txtDestPais.ReadOnly = true;
             this.txtDestPais.Size = new System.Drawing.Size(199, 26);
             this.txtDestPais.TabIndex = 36;
-            // 
-            // txtSUFRAMA
-            // 
-            this.txtSUFRAMA.Location = new System.Drawing.Point(291, 348);
-            this.txtSUFRAMA.Name = "txtSUFRAMA";
-            this.txtSUFRAMA.ReadOnly = true;
-            this.txtSUFRAMA.Size = new System.Drawing.Size(330, 26);
-            this.txtSUFRAMA.TabIndex = 35;
             // 
             // txtDestCPF
             // 
@@ -843,20 +769,7 @@
             // 
             // tbProd
             // 
-            this.tbProd.Controls.Add(this.panel8);
-            this.tbProd.Controls.Add(this.panel7);
-            this.tbProd.Controls.Add(this.panel6);
-            this.tbProd.Controls.Add(this.panel5);
-            this.tbProd.Controls.Add(this.panel4);
-            this.tbProd.Controls.Add(this.panel3);
-            this.tbProd.Controls.Add(this.panel2);
-            this.tbProd.Controls.Add(this.panel1);
-            this.tbProd.Controls.Add(this.PanelProd1);
-            this.tbProd.Controls.Add(this.lblDesc);
-            this.tbProd.Controls.Add(this.LblQtd);
-            this.tbProd.Controls.Add(this.lblUnCom);
-            this.tbProd.Controls.Add(this.lblValor);
-            this.tbProd.Controls.Add(this.lblNum);
+            this.tbProd.Controls.Add(this.lstProdutos);
             this.tbProd.Location = new System.Drawing.Point(4, 29);
             this.tbProd.Name = "tbProd";
             this.tbProd.Padding = new System.Windows.Forms.Padding(3);
@@ -864,609 +777,6 @@
             this.tbProd.TabIndex = 2;
             this.tbProd.Text = "Produtos";
             this.tbProd.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.txProdQuant9);
-            this.panel8.Controls.Add(this.button8);
-            this.panel8.Controls.Add(this.txtProdNum9);
-            this.panel8.Controls.Add(this.txtProdDesc9);
-            this.panel8.Controls.Add(this.txtProdVlr9);
-            this.panel8.Controls.Add(this.txtProdUnCom9);
-            this.panel8.Location = new System.Drawing.Point(6, 428);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(617, 44);
-            this.panel8.TabIndex = 19;
-            // 
-            // txProdQuant9
-            // 
-            this.txProdQuant9.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant9.Name = "txProdQuant9";
-            this.txProdQuant9.ReadOnly = true;
-            this.txProdQuant9.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant9.TabIndex = 8;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(3, 8);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(19, 27);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "+";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum9
-            // 
-            this.txtProdNum9.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum9.Name = "txtProdNum9";
-            this.txtProdNum9.ReadOnly = true;
-            this.txtProdNum9.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum9.TabIndex = 5;
-            // 
-            // txtProdDesc9
-            // 
-            this.txtProdDesc9.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc9.Name = "txtProdDesc9";
-            this.txtProdDesc9.ReadOnly = true;
-            this.txtProdDesc9.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc9.TabIndex = 9;
-            // 
-            // txtProdVlr9
-            // 
-            this.txtProdVlr9.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr9.Name = "txtProdVlr9";
-            this.txtProdVlr9.ReadOnly = true;
-            this.txtProdVlr9.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr9.TabIndex = 6;
-            // 
-            // txtProdUnCom9
-            // 
-            this.txtProdUnCom9.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom9.Name = "txtProdUnCom9";
-            this.txtProdUnCom9.ReadOnly = true;
-            this.txtProdUnCom9.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom9.TabIndex = 7;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.txProdQuant8);
-            this.panel7.Controls.Add(this.button7);
-            this.panel7.Controls.Add(this.txtProdNum8);
-            this.panel7.Controls.Add(this.txtProdDesc8);
-            this.panel7.Controls.Add(this.txtProdVlr8);
-            this.panel7.Controls.Add(this.txtProdUnCom8);
-            this.panel7.Location = new System.Drawing.Point(6, 380);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(617, 44);
-            this.panel7.TabIndex = 18;
-            // 
-            // txProdQuant8
-            // 
-            this.txProdQuant8.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant8.Name = "txProdQuant8";
-            this.txProdQuant8.ReadOnly = true;
-            this.txProdQuant8.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant8.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(3, 8);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(19, 27);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum8
-            // 
-            this.txtProdNum8.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum8.Name = "txtProdNum8";
-            this.txtProdNum8.ReadOnly = true;
-            this.txtProdNum8.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum8.TabIndex = 5;
-            // 
-            // txtProdDesc8
-            // 
-            this.txtProdDesc8.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc8.Name = "txtProdDesc8";
-            this.txtProdDesc8.ReadOnly = true;
-            this.txtProdDesc8.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc8.TabIndex = 9;
-            // 
-            // txtProdVlr8
-            // 
-            this.txtProdVlr8.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr8.Name = "txtProdVlr8";
-            this.txtProdVlr8.ReadOnly = true;
-            this.txtProdVlr8.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr8.TabIndex = 6;
-            // 
-            // txtProdUnCom8
-            // 
-            this.txtProdUnCom8.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom8.Name = "txtProdUnCom8";
-            this.txtProdUnCom8.ReadOnly = true;
-            this.txtProdUnCom8.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom8.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.txProdQuant7);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.txtProdNum7);
-            this.panel6.Controls.Add(this.txtProdDesc7);
-            this.panel6.Controls.Add(this.txtProdVlr7);
-            this.panel6.Controls.Add(this.txtProdUnCom7);
-            this.panel6.Location = new System.Drawing.Point(6, 330);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(617, 44);
-            this.panel6.TabIndex = 17;
-            // 
-            // txProdQuant7
-            // 
-            this.txProdQuant7.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant7.Name = "txProdQuant7";
-            this.txProdQuant7.ReadOnly = true;
-            this.txProdQuant7.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant7.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(3, 8);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(19, 27);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "+";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum7
-            // 
-            this.txtProdNum7.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum7.Name = "txtProdNum7";
-            this.txtProdNum7.ReadOnly = true;
-            this.txtProdNum7.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum7.TabIndex = 5;
-            // 
-            // txtProdDesc7
-            // 
-            this.txtProdDesc7.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc7.Name = "txtProdDesc7";
-            this.txtProdDesc7.ReadOnly = true;
-            this.txtProdDesc7.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc7.TabIndex = 9;
-            // 
-            // txtProdVlr7
-            // 
-            this.txtProdVlr7.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr7.Name = "txtProdVlr7";
-            this.txtProdVlr7.ReadOnly = true;
-            this.txtProdVlr7.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr7.TabIndex = 6;
-            // 
-            // txtProdUnCom7
-            // 
-            this.txtProdUnCom7.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom7.Name = "txtProdUnCom7";
-            this.txtProdUnCom7.ReadOnly = true;
-            this.txtProdUnCom7.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom7.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txProdQuant6);
-            this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.txtProdNum6);
-            this.panel5.Controls.Add(this.txtProdDesc6);
-            this.panel5.Controls.Add(this.txtProdVlr6);
-            this.panel5.Controls.Add(this.txtProdUnCom6);
-            this.panel5.Location = new System.Drawing.Point(6, 280);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(617, 44);
-            this.panel5.TabIndex = 16;
-            // 
-            // txProdQuant6
-            // 
-            this.txProdQuant6.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant6.Name = "txProdQuant6";
-            this.txProdQuant6.ReadOnly = true;
-            this.txProdQuant6.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant6.TabIndex = 8;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(3, 8);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(19, 27);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum6
-            // 
-            this.txtProdNum6.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum6.Name = "txtProdNum6";
-            this.txtProdNum6.ReadOnly = true;
-            this.txtProdNum6.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum6.TabIndex = 5;
-            // 
-            // txtProdDesc6
-            // 
-            this.txtProdDesc6.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc6.Name = "txtProdDesc6";
-            this.txtProdDesc6.ReadOnly = true;
-            this.txtProdDesc6.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc6.TabIndex = 9;
-            // 
-            // txtProdVlr6
-            // 
-            this.txtProdVlr6.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr6.Name = "txtProdVlr6";
-            this.txtProdVlr6.ReadOnly = true;
-            this.txtProdVlr6.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr6.TabIndex = 6;
-            // 
-            // txtProdUnCom6
-            // 
-            this.txtProdUnCom6.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom6.Name = "txtProdUnCom6";
-            this.txtProdUnCom6.ReadOnly = true;
-            this.txtProdUnCom6.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom6.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txProdQuant5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.txtProdNum5);
-            this.panel4.Controls.Add(this.txtProdDesc5);
-            this.panel4.Controls.Add(this.txtProdVlr5);
-            this.panel4.Controls.Add(this.txtProdUnCom5);
-            this.panel4.Location = new System.Drawing.Point(6, 230);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(617, 44);
-            this.panel4.TabIndex = 15;
-            // 
-            // txProdQuant5
-            // 
-            this.txProdQuant5.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant5.Name = "txProdQuant5";
-            this.txProdQuant5.ReadOnly = true;
-            this.txProdQuant5.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant5.TabIndex = 8;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(3, 8);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(19, 27);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum5
-            // 
-            this.txtProdNum5.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum5.Name = "txtProdNum5";
-            this.txtProdNum5.ReadOnly = true;
-            this.txtProdNum5.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum5.TabIndex = 5;
-            // 
-            // txtProdDesc5
-            // 
-            this.txtProdDesc5.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc5.Name = "txtProdDesc5";
-            this.txtProdDesc5.ReadOnly = true;
-            this.txtProdDesc5.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc5.TabIndex = 9;
-            // 
-            // txtProdVlr5
-            // 
-            this.txtProdVlr5.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr5.Name = "txtProdVlr5";
-            this.txtProdVlr5.ReadOnly = true;
-            this.txtProdVlr5.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr5.TabIndex = 6;
-            // 
-            // txtProdUnCom5
-            // 
-            this.txtProdUnCom5.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom5.Name = "txtProdUnCom5";
-            this.txtProdUnCom5.ReadOnly = true;
-            this.txtProdUnCom5.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom5.TabIndex = 7;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txProdQuant4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.txtProdNum4);
-            this.panel3.Controls.Add(this.txtProdDesc4);
-            this.panel3.Controls.Add(this.txtProdVlr4);
-            this.panel3.Controls.Add(this.txtProdUnCom4);
-            this.panel3.Location = new System.Drawing.Point(6, 180);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(617, 44);
-            this.panel3.TabIndex = 14;
-            // 
-            // txProdQuant4
-            // 
-            this.txProdQuant4.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant4.Name = "txProdQuant4";
-            this.txProdQuant4.ReadOnly = true;
-            this.txProdQuant4.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant4.TabIndex = 8;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(19, 27);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum4
-            // 
-            this.txtProdNum4.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum4.Name = "txtProdNum4";
-            this.txtProdNum4.ReadOnly = true;
-            this.txtProdNum4.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum4.TabIndex = 5;
-            // 
-            // txtProdDesc4
-            // 
-            this.txtProdDesc4.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc4.Name = "txtProdDesc4";
-            this.txtProdDesc4.ReadOnly = true;
-            this.txtProdDesc4.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc4.TabIndex = 9;
-            // 
-            // txtProdVlr4
-            // 
-            this.txtProdVlr4.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr4.Name = "txtProdVlr4";
-            this.txtProdVlr4.ReadOnly = true;
-            this.txtProdVlr4.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr4.TabIndex = 6;
-            // 
-            // txtProdUnCom4
-            // 
-            this.txtProdUnCom4.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom4.Name = "txtProdUnCom4";
-            this.txtProdUnCom4.ReadOnly = true;
-            this.txtProdUnCom4.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom4.TabIndex = 7;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txProdQuant3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.txtProdNum3);
-            this.panel2.Controls.Add(this.txtProdDesc3);
-            this.panel2.Controls.Add(this.txtProdVlr3);
-            this.panel2.Controls.Add(this.txtProdUnCom3);
-            this.panel2.Location = new System.Drawing.Point(6, 130);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(617, 44);
-            this.panel2.TabIndex = 13;
-            // 
-            // txProdQuant3
-            // 
-            this.txProdQuant3.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant3.Name = "txProdQuant3";
-            this.txProdQuant3.ReadOnly = true;
-            this.txProdQuant3.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant3.TabIndex = 8;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(19, 27);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum3
-            // 
-            this.txtProdNum3.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum3.Name = "txtProdNum3";
-            this.txtProdNum3.ReadOnly = true;
-            this.txtProdNum3.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum3.TabIndex = 5;
-            // 
-            // txtProdDesc3
-            // 
-            this.txtProdDesc3.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc3.Name = "txtProdDesc3";
-            this.txtProdDesc3.ReadOnly = true;
-            this.txtProdDesc3.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc3.TabIndex = 9;
-            // 
-            // txtProdVlr3
-            // 
-            this.txtProdVlr3.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr3.Name = "txtProdVlr3";
-            this.txtProdVlr3.ReadOnly = true;
-            this.txtProdVlr3.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr3.TabIndex = 6;
-            // 
-            // txtProdUnCom3
-            // 
-            this.txtProdUnCom3.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom3.Name = "txtProdUnCom3";
-            this.txtProdUnCom3.ReadOnly = true;
-            this.txtProdUnCom3.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom3.TabIndex = 7;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txProdQuant2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtProdNum2);
-            this.panel1.Controls.Add(this.txtProdDesc2);
-            this.panel1.Controls.Add(this.txtProdVlr2);
-            this.panel1.Controls.Add(this.txtProdUnCom2);
-            this.panel1.Location = new System.Drawing.Point(6, 80);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 44);
-            this.panel1.TabIndex = 12;
-            // 
-            // txProdQuant2
-            // 
-            this.txProdQuant2.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant2.Name = "txProdQuant2";
-            this.txProdQuant2.ReadOnly = true;
-            this.txProdQuant2.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant2.TabIndex = 8;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(19, 27);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum2
-            // 
-            this.txtProdNum2.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum2.Name = "txtProdNum2";
-            this.txtProdNum2.ReadOnly = true;
-            this.txtProdNum2.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum2.TabIndex = 5;
-            // 
-            // txtProdDesc2
-            // 
-            this.txtProdDesc2.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc2.Name = "txtProdDesc2";
-            this.txtProdDesc2.ReadOnly = true;
-            this.txtProdDesc2.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc2.TabIndex = 9;
-            // 
-            // txtProdVlr2
-            // 
-            this.txtProdVlr2.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr2.Name = "txtProdVlr2";
-            this.txtProdVlr2.ReadOnly = true;
-            this.txtProdVlr2.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr2.TabIndex = 6;
-            // 
-            // txtProdUnCom2
-            // 
-            this.txtProdUnCom2.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom2.Name = "txtProdUnCom2";
-            this.txtProdUnCom2.ReadOnly = true;
-            this.txtProdUnCom2.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom2.TabIndex = 7;
-            // 
-            // PanelProd1
-            // 
-            this.PanelProd1.Controls.Add(this.txProdQuant1);
-            this.PanelProd1.Controls.Add(this.btnExp);
-            this.PanelProd1.Controls.Add(this.txtProdNum1);
-            this.PanelProd1.Controls.Add(this.txtProdDesc1);
-            this.PanelProd1.Controls.Add(this.txtProdVlr1);
-            this.PanelProd1.Controls.Add(this.txtProdUnCom1);
-            this.PanelProd1.Location = new System.Drawing.Point(6, 30);
-            this.PanelProd1.Name = "PanelProd1";
-            this.PanelProd1.Size = new System.Drawing.Size(617, 44);
-            this.PanelProd1.TabIndex = 11;
-            // 
-            // txProdQuant1
-            // 
-            this.txProdQuant1.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant1.Name = "txProdQuant1";
-            this.txProdQuant1.ReadOnly = true;
-            this.txProdQuant1.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant1.TabIndex = 8;
-            // 
-            // btnExp
-            // 
-            this.btnExp.Location = new System.Drawing.Point(3, 8);
-            this.btnExp.Name = "btnExp";
-            this.btnExp.Size = new System.Drawing.Size(19, 27);
-            this.btnExp.TabIndex = 10;
-            this.btnExp.Text = "+";
-            this.btnExp.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum1
-            // 
-            this.txtProdNum1.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum1.Name = "txtProdNum1";
-            this.txtProdNum1.ReadOnly = true;
-            this.txtProdNum1.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum1.TabIndex = 5;
-            // 
-            // txtProdDesc1
-            // 
-            this.txtProdDesc1.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc1.Name = "txtProdDesc1";
-            this.txtProdDesc1.ReadOnly = true;
-            this.txtProdDesc1.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc1.TabIndex = 9;
-            // 
-            // txtProdVlr1
-            // 
-            this.txtProdVlr1.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr1.Name = "txtProdVlr1";
-            this.txtProdVlr1.ReadOnly = true;
-            this.txtProdVlr1.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr1.TabIndex = 6;
-            // 
-            // txtProdUnCom1
-            // 
-            this.txtProdUnCom1.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom1.Name = "txtProdUnCom1";
-            this.txtProdUnCom1.ReadOnly = true;
-            this.txtProdUnCom1.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom1.TabIndex = 7;
-            // 
-            // lblDesc
-            // 
-            this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(84, 7);
-            this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(86, 20);
-            this.lblDesc.TabIndex = 4;
-            this.lblDesc.Text = "Descrição";
-            // 
-            // LblQtd
-            // 
-            this.LblQtd.AutoSize = true;
-            this.LblQtd.Location = new System.Drawing.Point(301, 7);
-            this.LblQtd.Name = "LblQtd";
-            this.LblQtd.Size = new System.Drawing.Size(94, 20);
-            this.LblQtd.TabIndex = 3;
-            this.LblQtd.Text = "Quantidade";
-            // 
-            // lblUnCom
-            // 
-            this.lblUnCom.AutoSize = true;
-            this.lblUnCom.Location = new System.Drawing.Point(396, 7);
-            this.lblUnCom.Name = "lblUnCom";
-            this.lblUnCom.Size = new System.Drawing.Size(115, 20);
-            this.lblUnCom.TabIndex = 2;
-            this.lblUnCom.Text = "Un. Comercial";
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(514, 7);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(86, 20);
-            this.lblValor.TabIndex = 1;
-            this.lblValor.Text = "Valor (R$)";
-            // 
-            // lblNum
-            // 
-            this.lblNum.AutoSize = true;
-            this.lblNum.Location = new System.Drawing.Point(35, 7);
-            this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(48, 20);
-            this.lblNum.TabIndex = 0;
-            this.lblNum.Text = "Num.";
             // 
             // tbTot
             // 
@@ -2063,28 +1373,52 @@
             this.lblModalidadeFrete.TabIndex = 2;
             this.lblModalidadeFrete.Text = "Modalidade Frete";
             // 
-            // lblIE
+            // lstProdutos
             // 
-            this.lblIE.AutoSize = true;
-            this.lblIE.Location = new System.Drawing.Point(14, 243);
-            this.lblIE.Name = "lblIE";
-            this.lblIE.Size = new System.Drawing.Size(24, 20);
-            this.lblIE.TabIndex = 22;
-            this.lblIE.Text = "IE";
+            this.lstProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.descricao,
+            this.quantidade,
+            this.vlrUnitario,
+            this.vlrTotal});
+            this.lstProdutos.HideSelection = false;
+            this.lstProdutos.Location = new System.Drawing.Point(7, 7);
+            this.lstProdutos.Name = "lstProdutos";
+            this.lstProdutos.Size = new System.Drawing.Size(617, 468);
+            this.lstProdutos.TabIndex = 0;
+            this.lstProdutos.UseCompatibleStateImageBehavior = false;
+            this.lstProdutos.View = System.Windows.Forms.View.Details;
             // 
-            // txtEmitIE
+            // id
             // 
-            this.txtEmitIE.Location = new System.Drawing.Point(86, 235);
-            this.txtEmitIE.Name = "txtEmitIE";
-            this.txtEmitIE.ReadOnly = true;
-            this.txtEmitIE.Size = new System.Drawing.Size(265, 26);
-            this.txtEmitIE.TabIndex = 6;
+            this.id.Text = "Nr";
+            this.id.Width = 41;
+            // 
+            // descricao
+            // 
+            this.descricao.Text = "Descrição";
+            this.descricao.Width = 117;
+            // 
+            // quantidade
+            // 
+            this.quantidade.Text = "Quantidade";
+            this.quantidade.Width = 119;
+            // 
+            // vlrUnitario
+            // 
+            this.vlrUnitario.Text = "Vlr. Unitário";
+            this.vlrUnitario.Width = 107;
+            // 
+            // vlrTotal
+            // 
+            this.vlrTotal.Text = "Vlr. Total";
+            this.vlrTotal.Width = 127;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 623);
+            this.ClientSize = new System.Drawing.Size(673, 623);
             this.Controls.Add(this.gpXml);
             this.Controls.Add(this.gpNFe);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2093,31 +1427,12 @@
             this.gpXml.ResumeLayout(false);
             this.gpXml.PerformLayout();
             this.gpNFe.ResumeLayout(false);
+            this.tabGeral.ResumeLayout(false);
             this.tbEmitente.ResumeLayout(false);
-            this.tbEmit.ResumeLayout(false);
-            this.tbEmit.PerformLayout();
+            this.tbEmitente.PerformLayout();
             this.tbDest.ResumeLayout(false);
             this.tbDest.PerformLayout();
             this.tbProd.ResumeLayout(false);
-            this.tbProd.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.PanelProd1.ResumeLayout(false);
-            this.PanelProd1.PerformLayout();
             this.tbTot.ResumeLayout(false);
             this.gpTot.ResumeLayout(false);
             this.gpTot.PerformLayout();
@@ -2139,8 +1454,8 @@
         private System.Windows.Forms.TextBox txtXML;
         private System.Windows.Forms.GroupBox gpXml;
         private System.Windows.Forms.GroupBox gpNFe;
-        private System.Windows.Forms.TabControl tbEmitente;
-        private System.Windows.Forms.TabPage tbEmit;
+        private System.Windows.Forms.TabControl tabGeral;
+        private System.Windows.Forms.TabPage tbEmitente;
         private System.Windows.Forms.TabPage tbDest;
         private System.Windows.Forms.TabPage tbProd;
         private System.Windows.Forms.TabPage tbTot;
@@ -2173,13 +1488,10 @@
         private System.Windows.Forms.TextBox txtEmitNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblIndIE;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -2188,78 +1500,14 @@
         private System.Windows.Forms.TextBox txtDestEnd;
         private System.Windows.Forms.TextBox txtDestTel;
         private System.Windows.Forms.TextBox txtDestCEp;
-        private System.Windows.Forms.TextBox txtIE;
         private System.Windows.Forms.TextBox txtDestUF;
-        private System.Windows.Forms.TextBox txtDEstBairro;
+        private System.Windows.Forms.TextBox txtDestBairro;
         private System.Windows.Forms.TextBox txtDestMun;
-        private System.Windows.Forms.TextBox lblDestEmail;
-        private System.Windows.Forms.TextBox txtIndIE;
-        private System.Windows.Forms.TextBox txtIM;
+        private System.Windows.Forms.TextBox txtDestEmail;
+        private System.Windows.Forms.TextBox txtDestIndIE;
         private System.Windows.Forms.TextBox txtDestPais;
-        private System.Windows.Forms.TextBox txtSUFRAMA;
         private System.Windows.Forms.TextBox txtDestCPF;
         private System.Windows.Forms.TextBox txtDestNome;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txProdQuant8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox txtProdNum8;
-        private System.Windows.Forms.TextBox txtProdDesc8;
-        private System.Windows.Forms.TextBox txtProdVlr8;
-        private System.Windows.Forms.TextBox txtProdUnCom8;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txProdQuant7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox txtProdNum7;
-        private System.Windows.Forms.TextBox txtProdDesc7;
-        private System.Windows.Forms.TextBox txtProdVlr7;
-        private System.Windows.Forms.TextBox txtProdUnCom7;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txProdQuant6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox txtProdNum6;
-        private System.Windows.Forms.TextBox txtProdDesc6;
-        private System.Windows.Forms.TextBox txtProdVlr6;
-        private System.Windows.Forms.TextBox txtProdUnCom6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txProdQuant5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox txtProdNum5;
-        private System.Windows.Forms.TextBox txtProdDesc5;
-        private System.Windows.Forms.TextBox txtProdVlr5;
-        private System.Windows.Forms.TextBox txtProdUnCom5;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txProdQuant4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtProdNum4;
-        private System.Windows.Forms.TextBox txtProdDesc4;
-        private System.Windows.Forms.TextBox txtProdVlr4;
-        private System.Windows.Forms.TextBox txtProdUnCom4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txProdQuant3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtProdNum3;
-        private System.Windows.Forms.TextBox txtProdDesc3;
-        private System.Windows.Forms.TextBox txtProdVlr3;
-        private System.Windows.Forms.TextBox txtProdUnCom3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txProdQuant2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtProdNum2;
-        private System.Windows.Forms.TextBox txtProdDesc2;
-        private System.Windows.Forms.TextBox txtProdVlr2;
-        private System.Windows.Forms.TextBox txtProdUnCom2;
-        private System.Windows.Forms.Panel PanelProd1;
-        private System.Windows.Forms.TextBox txProdQuant1;
-        private System.Windows.Forms.Button btnExp;
-        private System.Windows.Forms.TextBox txtProdNum1;
-        private System.Windows.Forms.TextBox txtProdDesc1;
-        private System.Windows.Forms.TextBox txtProdVlr1;
-        private System.Windows.Forms.TextBox txtProdUnCom1;
-        private System.Windows.Forms.Label lblDesc;
-        private System.Windows.Forms.Label LblQtd;
-        private System.Windows.Forms.Label lblUnCom;
-        private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.GroupBox gpTot;
         private System.Windows.Forms.TextBox TxtTotProdutos;
         private System.Windows.Forms.TextBox txtTotNfe;
@@ -2320,14 +1568,17 @@
         private System.Windows.Forms.Label lblCompCont;
         private System.Windows.Forms.TextBox txtFisco;
         private System.Windows.Forms.Label lblFisco;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txProdQuant9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox txtProdNum9;
-        private System.Windows.Forms.TextBox txtProdDesc9;
-        private System.Windows.Forms.TextBox txtProdVlr9;
-        private System.Windows.Forms.TextBox txtProdUnCom9;
         private System.Windows.Forms.Label lblIE;
         private System.Windows.Forms.TextBox txtEmitIE;
+        private System.Windows.Forms.TextBox txtDestComplemento;
+        private System.Windows.Forms.Label lblComplemento;
+        private System.Windows.Forms.TextBox txtDestNumero;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.ListView lstProdutos;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader descricao;
+        private System.Windows.Forms.ColumnHeader quantidade;
+        private System.Windows.Forms.ColumnHeader vlrUnitario;
+        private System.Windows.Forms.ColumnHeader vlrTotal;
     }
 }
