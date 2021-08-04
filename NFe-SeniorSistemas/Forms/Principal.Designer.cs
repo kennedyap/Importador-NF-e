@@ -37,37 +37,31 @@
             this.tbEmitente = new System.Windows.Forms.TabControl();
             this.tbEmit = new System.Windows.Forms.TabPage();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.lblCNAE = new System.Windows.Forms.Label();
             this.lblCodRegTrib = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblIM = new System.Windows.Forms.Label();
             this.IESubstitutoTributario = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblUF = new System.Windows.Forms.Label();
             this.lblCep = new System.Windows.Forms.Label();
-            this.lblIE = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblCnpj = new System.Windows.Forms.Label();
             this.lblNFantasia = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmitEnd = new System.Windows.Forms.TextBox();
+            this.txtEmitTel = new System.Windows.Forms.TextBox();
+            this.txtEmitCEP = new System.Windows.Forms.TextBox();
+            this.txtEmitIETrib = new System.Windows.Forms.TextBox();
+            this.txtEmitUF = new System.Windows.Forms.TextBox();
+            this.txtEmitBairro = new System.Windows.Forms.TextBox();
+            this.txtEmitMun = new System.Windows.Forms.TextBox();
+            this.txtEmitCdRegTrib = new System.Windows.Forms.TextBox();
+            this.txtEmitPais = new System.Windows.Forms.TextBox();
+            this.txtEmitMunOcorrFGICMS = new System.Windows.Forms.TextBox();
+            this.txtEmitCNPJ = new System.Windows.Forms.TextBox();
+            this.txtEmitNomeF = new System.Windows.Forms.TextBox();
+            this.txtEmitNome = new System.Windows.Forms.TextBox();
             this.tbDest = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,6 +92,13 @@
             this.txtDestCPF = new System.Windows.Forms.TextBox();
             this.txtDestNome = new System.Windows.Forms.TextBox();
             this.tbProd = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txProdQuant9 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.txtProdNum9 = new System.Windows.Forms.TextBox();
+            this.txtProdDesc9 = new System.Windows.Forms.TextBox();
+            this.txtProdVlr9 = new System.Windows.Forms.TextBox();
+            this.txtProdUnCom9 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txProdQuant8 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
@@ -206,6 +207,11 @@
             this.txtICMS = new System.Windows.Forms.TextBox();
             this.txtBaseICMS = new System.Windows.Forms.TextBox();
             this.tbInfAdc = new System.Windows.Forms.TabPage();
+            this.gpInfAdc = new System.Windows.Forms.GroupBox();
+            this.txtCompl = new System.Windows.Forms.TextBox();
+            this.lblCompCont = new System.Windows.Forms.Label();
+            this.txtFisco = new System.Windows.Forms.TextBox();
+            this.lblFisco = new System.Windows.Forms.Label();
             this.gpCobranca = new System.Windows.Forms.GroupBox();
             this.txtVlrPgmto = new System.Windows.Forms.TextBox();
             this.lblVlrPgmto = new System.Windows.Forms.Label();
@@ -216,24 +222,15 @@
             this.gpTransp = new System.Windows.Forms.GroupBox();
             this.txtModFrete = new System.Windows.Forms.TextBox();
             this.lblModalidadeFrete = new System.Windows.Forms.Label();
-            this.gpInfAdc = new System.Windows.Forms.GroupBox();
-            this.txtFisco = new System.Windows.Forms.TextBox();
-            this.lblFisco = new System.Windows.Forms.Label();
-            this.txtCompl = new System.Windows.Forms.TextBox();
-            this.lblCompCont = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txProdQuant9 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.txtProdNum9 = new System.Windows.Forms.TextBox();
-            this.txtProdDesc9 = new System.Windows.Forms.TextBox();
-            this.txtProdVlr9 = new System.Windows.Forms.TextBox();
-            this.txtProdUnCom9 = new System.Windows.Forms.TextBox();
+            this.lblIE = new System.Windows.Forms.Label();
+            this.txtEmitIE = new System.Windows.Forms.TextBox();
             this.gpXml.SuspendLayout();
             this.gpNFe.SuspendLayout();
             this.tbEmitente.SuspendLayout();
             this.tbEmit.SuspendLayout();
             this.tbDest.SuspendLayout();
             this.tbProd.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -245,10 +242,9 @@
             this.tbTot.SuspendLayout();
             this.gpTot.SuspendLayout();
             this.tbInfAdc.SuspendLayout();
+            this.gpInfAdc.SuspendLayout();
             this.gpCobranca.SuspendLayout();
             this.gpTransp.SuspendLayout();
-            this.gpInfAdc.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSelXML
@@ -312,10 +308,8 @@
             // tbEmit
             // 
             this.tbEmit.Controls.Add(this.lblTelefone);
-            this.tbEmit.Controls.Add(this.lblCNAE);
             this.tbEmit.Controls.Add(this.lblCodRegTrib);
             this.tbEmit.Controls.Add(this.label10);
-            this.tbEmit.Controls.Add(this.lblIM);
             this.tbEmit.Controls.Add(this.IESubstitutoTributario);
             this.tbEmit.Controls.Add(this.lblPais);
             this.tbEmit.Controls.Add(this.lblUF);
@@ -327,29 +321,28 @@
             this.tbEmit.Controls.Add(this.lblCnpj);
             this.tbEmit.Controls.Add(this.lblNFantasia);
             this.tbEmit.Controls.Add(this.lblNome);
-            this.tbEmit.Controls.Add(this.textBox16);
-            this.tbEmit.Controls.Add(this.textBox15);
-            this.tbEmit.Controls.Add(this.textBox14);
-            this.tbEmit.Controls.Add(this.textBox13);
-            this.tbEmit.Controls.Add(this.textBox12);
-            this.tbEmit.Controls.Add(this.textBox11);
-            this.tbEmit.Controls.Add(this.textBox10);
-            this.tbEmit.Controls.Add(this.textBox9);
-            this.tbEmit.Controls.Add(this.textBox8);
-            this.tbEmit.Controls.Add(this.textBox7);
-            this.tbEmit.Controls.Add(this.textBox6);
-            this.tbEmit.Controls.Add(this.textBox5);
-            this.tbEmit.Controls.Add(this.textBox4);
-            this.tbEmit.Controls.Add(this.textBox3);
-            this.tbEmit.Controls.Add(this.textBox2);
-            this.tbEmit.Controls.Add(this.textBox1);
+            this.tbEmit.Controls.Add(this.txtEmitEnd);
+            this.tbEmit.Controls.Add(this.txtEmitTel);
+            this.tbEmit.Controls.Add(this.txtEmitCEP);
+            this.tbEmit.Controls.Add(this.txtEmitIETrib);
+            this.tbEmit.Controls.Add(this.txtEmitUF);
+            this.tbEmit.Controls.Add(this.txtEmitBairro);
+            this.tbEmit.Controls.Add(this.txtEmitMun);
+            this.tbEmit.Controls.Add(this.txtEmitIE);
+            this.tbEmit.Controls.Add(this.txtEmitCdRegTrib);
+            this.tbEmit.Controls.Add(this.txtEmitPais);
+            this.tbEmit.Controls.Add(this.txtEmitMunOcorrFGICMS);
+            this.tbEmit.Controls.Add(this.txtEmitCNPJ);
+            this.tbEmit.Controls.Add(this.txtEmitNomeF);
+            this.tbEmit.Controls.Add(this.txtEmitNome);
             this.tbEmit.Location = new System.Drawing.Point(4, 29);
             this.tbEmit.Name = "tbEmit";
             this.tbEmit.Padding = new System.Windows.Forms.Padding(3);
-            this.tbEmit.Size = new System.Drawing.Size(630, 475);
+            this.tbEmit.Size = new System.Drawing.Size(630, 481);
             this.tbEmit.TabIndex = 0;
             this.tbEmit.Text = "Emitente";
             this.tbEmit.UseVisualStyleBackColor = true;
+            this.tbEmit.Click += new System.EventHandler(this.tbEmit_Click);
             // 
             // lblTelefone
             // 
@@ -360,19 +353,10 @@
             this.lblTelefone.TabIndex = 31;
             this.lblTelefone.Text = "Tel.";
             // 
-            // lblCNAE
-            // 
-            this.lblCNAE.AutoSize = true;
-            this.lblCNAE.Location = new System.Drawing.Point(14, 411);
-            this.lblCNAE.Name = "lblCNAE";
-            this.lblCNAE.Size = new System.Drawing.Size(105, 20);
-            this.lblCNAE.TabIndex = 30;
-            this.lblCNAE.Text = "CNAE Fiscal";
-            // 
             // lblCodRegTrib
             // 
             this.lblCodRegTrib.AutoSize = true;
-            this.lblCodRegTrib.Location = new System.Drawing.Point(14, 379);
+            this.lblCodRegTrib.Location = new System.Drawing.Point(10, 393);
             this.lblCodRegTrib.Name = "lblCodRegTrib";
             this.lblCodRegTrib.Size = new System.Drawing.Size(222, 20);
             this.lblCodRegTrib.TabIndex = 29;
@@ -381,25 +365,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 347);
+            this.label10.Location = new System.Drawing.Point(10, 361);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(247, 20);
             this.label10.TabIndex = 28;
-            this.label10.Text = "Muni Ocorr. Fato Gerador ICMS";
-            // 
-            // lblIM
-            // 
-            this.lblIM.AutoSize = true;
-            this.lblIM.Location = new System.Drawing.Point(14, 318);
-            this.lblIM.Name = "lblIM";
-            this.lblIM.Size = new System.Drawing.Size(153, 20);
-            this.lblIM.TabIndex = 27;
-            this.lblIM.Text = "Inscrição Municipal";
+            this.label10.Text = "Mun. Ocorr. Fato Gerador ICMS";
             // 
             // IESubstitutoTributario
             // 
             this.IESubstitutoTributario.AutoSize = true;
-            this.IESubstitutoTributario.Location = new System.Drawing.Point(14, 286);
+            this.IESubstitutoTributario.Location = new System.Drawing.Point(10, 326);
             this.IESubstitutoTributario.Name = "IESubstitutoTributario";
             this.IESubstitutoTributario.Size = new System.Drawing.Size(180, 20);
             this.IESubstitutoTributario.TabIndex = 26;
@@ -431,15 +406,6 @@
             this.lblCep.Size = new System.Drawing.Size(43, 20);
             this.lblCep.TabIndex = 23;
             this.lblCep.Text = "CEP";
-            // 
-            // lblIE
-            // 
-            this.lblIE.AutoSize = true;
-            this.lblIE.Location = new System.Drawing.Point(14, 243);
-            this.lblIE.Name = "lblIE";
-            this.lblIE.Size = new System.Drawing.Size(24, 20);
-            this.lblIE.TabIndex = 22;
-            this.lblIE.Text = "IE";
             // 
             // label3
             // 
@@ -495,117 +461,109 @@
             this.lblNome.TabIndex = 16;
             this.lblNome.Text = "Nome";
             // 
-            // textBox16
+            // txtEmitEnd
             // 
-            this.textBox16.Location = new System.Drawing.Point(86, 139);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(532, 26);
-            this.textBox16.TabIndex = 15;
+            this.txtEmitEnd.Location = new System.Drawing.Point(86, 139);
+            this.txtEmitEnd.Name = "txtEmitEnd";
+            this.txtEmitEnd.ReadOnly = true;
+            this.txtEmitEnd.Size = new System.Drawing.Size(532, 26);
+            this.txtEmitEnd.TabIndex = 15;
             // 
-            // textBox15
+            // txtEmitTel
             // 
-            this.textBox15.Location = new System.Drawing.Point(419, 73);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(199, 26);
-            this.textBox15.TabIndex = 14;
+            this.txtEmitTel.Location = new System.Drawing.Point(419, 73);
+            this.txtEmitTel.Name = "txtEmitTel";
+            this.txtEmitTel.ReadOnly = true;
+            this.txtEmitTel.Size = new System.Drawing.Size(199, 26);
+            this.txtEmitTel.TabIndex = 14;
             // 
-            // textBox14
+            // txtEmitCEP
             // 
-            this.textBox14.Location = new System.Drawing.Point(419, 171);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(199, 26);
-            this.textBox14.TabIndex = 13;
+            this.txtEmitCEP.Location = new System.Drawing.Point(419, 171);
+            this.txtEmitCEP.Name = "txtEmitCEP";
+            this.txtEmitCEP.ReadOnly = true;
+            this.txtEmitCEP.Size = new System.Drawing.Size(199, 26);
+            this.txtEmitCEP.TabIndex = 13;
             // 
-            // textBox13
+            // txtEmitIETrib
             // 
-            this.textBox13.Location = new System.Drawing.Point(288, 312);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(330, 26);
-            this.textBox13.TabIndex = 12;
+            this.txtEmitIETrib.Location = new System.Drawing.Point(288, 320);
+            this.txtEmitIETrib.Name = "txtEmitIETrib";
+            this.txtEmitIETrib.ReadOnly = true;
+            this.txtEmitIETrib.Size = new System.Drawing.Size(330, 26);
+            this.txtEmitIETrib.TabIndex = 11;
             // 
-            // textBox12
+            // txtEmitUF
             // 
-            this.textBox12.Location = new System.Drawing.Point(288, 280);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(330, 26);
-            this.textBox12.TabIndex = 11;
+            this.txtEmitUF.Location = new System.Drawing.Point(518, 203);
+            this.txtEmitUF.Name = "txtEmitUF";
+            this.txtEmitUF.ReadOnly = true;
+            this.txtEmitUF.Size = new System.Drawing.Size(100, 26);
+            this.txtEmitUF.TabIndex = 10;
             // 
-            // textBox11
+            // txtEmitBairro
             // 
-            this.textBox11.Location = new System.Drawing.Point(518, 203);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 26);
-            this.textBox11.TabIndex = 10;
+            this.txtEmitBairro.Location = new System.Drawing.Point(86, 171);
+            this.txtEmitBairro.Name = "txtEmitBairro";
+            this.txtEmitBairro.ReadOnly = true;
+            this.txtEmitBairro.Size = new System.Drawing.Size(265, 26);
+            this.txtEmitBairro.TabIndex = 9;
             // 
-            // textBox10
+            // txtEmitMun
             // 
-            this.textBox10.Location = new System.Drawing.Point(86, 171);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(265, 26);
-            this.textBox10.TabIndex = 9;
+            this.txtEmitMun.Location = new System.Drawing.Point(86, 203);
+            this.txtEmitMun.Name = "txtEmitMun";
+            this.txtEmitMun.ReadOnly = true;
+            this.txtEmitMun.Size = new System.Drawing.Size(265, 26);
+            this.txtEmitMun.TabIndex = 8;
             // 
-            // textBox9
+            // txtEmitCdRegTrib
             // 
-            this.textBox9.Location = new System.Drawing.Point(86, 203);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(265, 26);
-            this.textBox9.TabIndex = 8;
+            this.txtEmitCdRegTrib.Location = new System.Drawing.Point(288, 393);
+            this.txtEmitCdRegTrib.Name = "txtEmitCdRegTrib";
+            this.txtEmitCdRegTrib.ReadOnly = true;
+            this.txtEmitCdRegTrib.Size = new System.Drawing.Size(330, 26);
+            this.txtEmitCdRegTrib.TabIndex = 5;
             // 
-            // textBox8
+            // txtEmitPais
             // 
-            this.textBox8.Location = new System.Drawing.Point(288, 408);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(330, 26);
-            this.textBox8.TabIndex = 7;
+            this.txtEmitPais.Location = new System.Drawing.Point(419, 235);
+            this.txtEmitPais.Name = "txtEmitPais";
+            this.txtEmitPais.ReadOnly = true;
+            this.txtEmitPais.Size = new System.Drawing.Size(199, 26);
+            this.txtEmitPais.TabIndex = 4;
             // 
-            // textBox7
+            // txtEmitMunOcorrFGICMS
             // 
-            this.textBox7.Location = new System.Drawing.Point(86, 235);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(265, 26);
-            this.textBox7.TabIndex = 6;
+            this.txtEmitMunOcorrFGICMS.Location = new System.Drawing.Point(288, 358);
+            this.txtEmitMunOcorrFGICMS.Name = "txtEmitMunOcorrFGICMS";
+            this.txtEmitMunOcorrFGICMS.ReadOnly = true;
+            this.txtEmitMunOcorrFGICMS.Size = new System.Drawing.Size(330, 26);
+            this.txtEmitMunOcorrFGICMS.TabIndex = 3;
             // 
-            // textBox6
+            // txtEmitCNPJ
             // 
-            this.textBox6.Location = new System.Drawing.Point(288, 376);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(330, 26);
-            this.textBox6.TabIndex = 5;
+            this.txtEmitCNPJ.Location = new System.Drawing.Point(87, 73);
+            this.txtEmitCNPJ.Name = "txtEmitCNPJ";
+            this.txtEmitCNPJ.ReadOnly = true;
+            this.txtEmitCNPJ.Size = new System.Drawing.Size(264, 26);
+            this.txtEmitCNPJ.TabIndex = 2;
             // 
-            // textBox5
+            // txtEmitNomeF
             // 
-            this.textBox5.Location = new System.Drawing.Point(419, 235);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(199, 26);
-            this.textBox5.TabIndex = 4;
+            this.txtEmitNomeF.Location = new System.Drawing.Point(87, 40);
+            this.txtEmitNomeF.Name = "txtEmitNomeF";
+            this.txtEmitNomeF.ReadOnly = true;
+            this.txtEmitNomeF.Size = new System.Drawing.Size(531, 26);
+            this.txtEmitNomeF.TabIndex = 1;
             // 
-            // textBox4
+            // txtEmitNome
             // 
-            this.textBox4.Location = new System.Drawing.Point(288, 344);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(330, 26);
-            this.textBox4.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(87, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 26);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(87, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(531, 26);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(87, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(531, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtEmitNome.Location = new System.Drawing.Point(87, 8);
+            this.txtEmitNome.Name = "txtEmitNome";
+            this.txtEmitNome.ReadOnly = true;
+            this.txtEmitNome.Size = new System.Drawing.Size(531, 26);
+            this.txtEmitNome.TabIndex = 0;
             // 
             // tbDest
             // 
@@ -640,7 +598,7 @@
             this.tbDest.Location = new System.Drawing.Point(4, 29);
             this.tbDest.Name = "tbDest";
             this.tbDest.Padding = new System.Windows.Forms.Padding(3);
-            this.tbDest.Size = new System.Drawing.Size(630, 475);
+            this.tbDest.Size = new System.Drawing.Size(630, 481);
             this.tbDest.TabIndex = 1;
             this.tbDest.Text = "Destinatário";
             this.tbDest.UseVisualStyleBackColor = true;
@@ -775,6 +733,7 @@
             // 
             this.txtDestEnd.Location = new System.Drawing.Point(89, 178);
             this.txtDestEnd.Name = "txtDestEnd";
+            this.txtDestEnd.ReadOnly = true;
             this.txtDestEnd.Size = new System.Drawing.Size(532, 26);
             this.txtDestEnd.TabIndex = 47;
             // 
@@ -782,6 +741,7 @@
             // 
             this.txtDestTel.Location = new System.Drawing.Point(89, 108);
             this.txtDestTel.Name = "txtDestTel";
+            this.txtDestTel.ReadOnly = true;
             this.txtDestTel.Size = new System.Drawing.Size(265, 26);
             this.txtDestTel.TabIndex = 46;
             // 
@@ -789,6 +749,7 @@
             // 
             this.txtDestCEp.Location = new System.Drawing.Point(422, 210);
             this.txtDestCEp.Name = "txtDestCEp";
+            this.txtDestCEp.ReadOnly = true;
             this.txtDestCEp.Size = new System.Drawing.Size(199, 26);
             this.txtDestCEp.TabIndex = 45;
             // 
@@ -796,6 +757,7 @@
             // 
             this.txtIE.Location = new System.Drawing.Point(291, 316);
             this.txtIE.Name = "txtIE";
+            this.txtIE.ReadOnly = true;
             this.txtIE.Size = new System.Drawing.Size(330, 26);
             this.txtIE.TabIndex = 44;
             // 
@@ -803,6 +765,7 @@
             // 
             this.txtDestUF.Location = new System.Drawing.Point(521, 242);
             this.txtDestUF.Name = "txtDestUF";
+            this.txtDestUF.ReadOnly = true;
             this.txtDestUF.Size = new System.Drawing.Size(100, 26);
             this.txtDestUF.TabIndex = 42;
             // 
@@ -810,6 +773,7 @@
             // 
             this.txtDEstBairro.Location = new System.Drawing.Point(89, 210);
             this.txtDEstBairro.Name = "txtDEstBairro";
+            this.txtDEstBairro.ReadOnly = true;
             this.txtDEstBairro.Size = new System.Drawing.Size(265, 26);
             this.txtDEstBairro.TabIndex = 41;
             // 
@@ -817,6 +781,7 @@
             // 
             this.txtDestMun.Location = new System.Drawing.Point(89, 242);
             this.txtDestMun.Name = "txtDestMun";
+            this.txtDestMun.ReadOnly = true;
             this.txtDestMun.Size = new System.Drawing.Size(265, 26);
             this.txtDestMun.TabIndex = 40;
             // 
@@ -824,6 +789,7 @@
             // 
             this.lblDestEmail.Location = new System.Drawing.Point(89, 73);
             this.lblDestEmail.Name = "lblDestEmail";
+            this.lblDestEmail.ReadOnly = true;
             this.lblDestEmail.Size = new System.Drawing.Size(339, 26);
             this.lblDestEmail.TabIndex = 39;
             // 
@@ -831,6 +797,7 @@
             // 
             this.txtIndIE.Location = new System.Drawing.Point(89, 274);
             this.txtIndIE.Name = "txtIndIE";
+            this.txtIndIE.ReadOnly = true;
             this.txtIndIE.Size = new System.Drawing.Size(265, 26);
             this.txtIndIE.TabIndex = 38;
             // 
@@ -838,6 +805,7 @@
             // 
             this.txtIM.Location = new System.Drawing.Point(291, 380);
             this.txtIM.Name = "txtIM";
+            this.txtIM.ReadOnly = true;
             this.txtIM.Size = new System.Drawing.Size(330, 26);
             this.txtIM.TabIndex = 37;
             // 
@@ -845,6 +813,7 @@
             // 
             this.txtDestPais.Location = new System.Drawing.Point(422, 274);
             this.txtDestPais.Name = "txtDestPais";
+            this.txtDestPais.ReadOnly = true;
             this.txtDestPais.Size = new System.Drawing.Size(199, 26);
             this.txtDestPais.TabIndex = 36;
             // 
@@ -852,6 +821,7 @@
             // 
             this.txtSUFRAMA.Location = new System.Drawing.Point(291, 348);
             this.txtSUFRAMA.Name = "txtSUFRAMA";
+            this.txtSUFRAMA.ReadOnly = true;
             this.txtSUFRAMA.Size = new System.Drawing.Size(330, 26);
             this.txtSUFRAMA.TabIndex = 35;
             // 
@@ -859,6 +829,7 @@
             // 
             this.txtDestCPF.Location = new System.Drawing.Point(89, 41);
             this.txtDestCPF.Name = "txtDestCPF";
+            this.txtDestCPF.ReadOnly = true;
             this.txtDestCPF.Size = new System.Drawing.Size(532, 26);
             this.txtDestCPF.TabIndex = 33;
             // 
@@ -866,6 +837,7 @@
             // 
             this.txtDestNome.Location = new System.Drawing.Point(89, 9);
             this.txtDestNome.Name = "txtDestNome";
+            this.txtDestNome.ReadOnly = true;
             this.txtDestNome.Size = new System.Drawing.Size(532, 26);
             this.txtDestNome.TabIndex = 32;
             // 
@@ -893,6 +865,68 @@
             this.tbProd.Text = "Produtos";
             this.tbProd.UseVisualStyleBackColor = true;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.txProdQuant9);
+            this.panel8.Controls.Add(this.button8);
+            this.panel8.Controls.Add(this.txtProdNum9);
+            this.panel8.Controls.Add(this.txtProdDesc9);
+            this.panel8.Controls.Add(this.txtProdVlr9);
+            this.panel8.Controls.Add(this.txtProdUnCom9);
+            this.panel8.Location = new System.Drawing.Point(6, 428);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(617, 44);
+            this.panel8.TabIndex = 19;
+            // 
+            // txProdQuant9
+            // 
+            this.txProdQuant9.Location = new System.Drawing.Point(296, 8);
+            this.txProdQuant9.Name = "txProdQuant9";
+            this.txProdQuant9.ReadOnly = true;
+            this.txProdQuant9.Size = new System.Drawing.Size(90, 26);
+            this.txProdQuant9.TabIndex = 8;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(3, 8);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(19, 27);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "+";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // txtProdNum9
+            // 
+            this.txtProdNum9.Location = new System.Drawing.Point(30, 8);
+            this.txtProdNum9.Name = "txtProdNum9";
+            this.txtProdNum9.ReadOnly = true;
+            this.txtProdNum9.Size = new System.Drawing.Size(44, 26);
+            this.txtProdNum9.TabIndex = 5;
+            // 
+            // txtProdDesc9
+            // 
+            this.txtProdDesc9.Location = new System.Drawing.Point(80, 8);
+            this.txtProdDesc9.Name = "txtProdDesc9";
+            this.txtProdDesc9.ReadOnly = true;
+            this.txtProdDesc9.Size = new System.Drawing.Size(211, 26);
+            this.txtProdDesc9.TabIndex = 9;
+            // 
+            // txtProdVlr9
+            // 
+            this.txtProdVlr9.Location = new System.Drawing.Point(509, 8);
+            this.txtProdVlr9.Name = "txtProdVlr9";
+            this.txtProdVlr9.ReadOnly = true;
+            this.txtProdVlr9.Size = new System.Drawing.Size(105, 26);
+            this.txtProdVlr9.TabIndex = 6;
+            // 
+            // txtProdUnCom9
+            // 
+            this.txtProdUnCom9.Location = new System.Drawing.Point(391, 8);
+            this.txtProdUnCom9.Name = "txtProdUnCom9";
+            this.txtProdUnCom9.ReadOnly = true;
+            this.txtProdUnCom9.Size = new System.Drawing.Size(113, 26);
+            this.txtProdUnCom9.TabIndex = 7;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.txProdQuant8);
@@ -910,6 +944,7 @@
             // 
             this.txProdQuant8.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant8.Name = "txProdQuant8";
+            this.txProdQuant8.ReadOnly = true;
             this.txProdQuant8.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant8.TabIndex = 8;
             // 
@@ -926,6 +961,7 @@
             // 
             this.txtProdNum8.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum8.Name = "txtProdNum8";
+            this.txtProdNum8.ReadOnly = true;
             this.txtProdNum8.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum8.TabIndex = 5;
             // 
@@ -933,6 +969,7 @@
             // 
             this.txtProdDesc8.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc8.Name = "txtProdDesc8";
+            this.txtProdDesc8.ReadOnly = true;
             this.txtProdDesc8.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc8.TabIndex = 9;
             // 
@@ -940,6 +977,7 @@
             // 
             this.txtProdVlr8.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr8.Name = "txtProdVlr8";
+            this.txtProdVlr8.ReadOnly = true;
             this.txtProdVlr8.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr8.TabIndex = 6;
             // 
@@ -947,6 +985,7 @@
             // 
             this.txtProdUnCom8.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom8.Name = "txtProdUnCom8";
+            this.txtProdUnCom8.ReadOnly = true;
             this.txtProdUnCom8.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom8.TabIndex = 7;
             // 
@@ -967,6 +1006,7 @@
             // 
             this.txProdQuant7.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant7.Name = "txProdQuant7";
+            this.txProdQuant7.ReadOnly = true;
             this.txProdQuant7.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant7.TabIndex = 8;
             // 
@@ -983,6 +1023,7 @@
             // 
             this.txtProdNum7.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum7.Name = "txtProdNum7";
+            this.txtProdNum7.ReadOnly = true;
             this.txtProdNum7.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum7.TabIndex = 5;
             // 
@@ -990,6 +1031,7 @@
             // 
             this.txtProdDesc7.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc7.Name = "txtProdDesc7";
+            this.txtProdDesc7.ReadOnly = true;
             this.txtProdDesc7.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc7.TabIndex = 9;
             // 
@@ -997,6 +1039,7 @@
             // 
             this.txtProdVlr7.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr7.Name = "txtProdVlr7";
+            this.txtProdVlr7.ReadOnly = true;
             this.txtProdVlr7.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr7.TabIndex = 6;
             // 
@@ -1004,6 +1047,7 @@
             // 
             this.txtProdUnCom7.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom7.Name = "txtProdUnCom7";
+            this.txtProdUnCom7.ReadOnly = true;
             this.txtProdUnCom7.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom7.TabIndex = 7;
             // 
@@ -1024,6 +1068,7 @@
             // 
             this.txProdQuant6.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant6.Name = "txProdQuant6";
+            this.txProdQuant6.ReadOnly = true;
             this.txProdQuant6.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant6.TabIndex = 8;
             // 
@@ -1040,6 +1085,7 @@
             // 
             this.txtProdNum6.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum6.Name = "txtProdNum6";
+            this.txtProdNum6.ReadOnly = true;
             this.txtProdNum6.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum6.TabIndex = 5;
             // 
@@ -1047,6 +1093,7 @@
             // 
             this.txtProdDesc6.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc6.Name = "txtProdDesc6";
+            this.txtProdDesc6.ReadOnly = true;
             this.txtProdDesc6.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc6.TabIndex = 9;
             // 
@@ -1054,6 +1101,7 @@
             // 
             this.txtProdVlr6.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr6.Name = "txtProdVlr6";
+            this.txtProdVlr6.ReadOnly = true;
             this.txtProdVlr6.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr6.TabIndex = 6;
             // 
@@ -1061,6 +1109,7 @@
             // 
             this.txtProdUnCom6.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom6.Name = "txtProdUnCom6";
+            this.txtProdUnCom6.ReadOnly = true;
             this.txtProdUnCom6.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom6.TabIndex = 7;
             // 
@@ -1081,6 +1130,7 @@
             // 
             this.txProdQuant5.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant5.Name = "txProdQuant5";
+            this.txProdQuant5.ReadOnly = true;
             this.txProdQuant5.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant5.TabIndex = 8;
             // 
@@ -1097,6 +1147,7 @@
             // 
             this.txtProdNum5.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum5.Name = "txtProdNum5";
+            this.txtProdNum5.ReadOnly = true;
             this.txtProdNum5.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum5.TabIndex = 5;
             // 
@@ -1104,6 +1155,7 @@
             // 
             this.txtProdDesc5.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc5.Name = "txtProdDesc5";
+            this.txtProdDesc5.ReadOnly = true;
             this.txtProdDesc5.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc5.TabIndex = 9;
             // 
@@ -1111,6 +1163,7 @@
             // 
             this.txtProdVlr5.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr5.Name = "txtProdVlr5";
+            this.txtProdVlr5.ReadOnly = true;
             this.txtProdVlr5.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr5.TabIndex = 6;
             // 
@@ -1118,6 +1171,7 @@
             // 
             this.txtProdUnCom5.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom5.Name = "txtProdUnCom5";
+            this.txtProdUnCom5.ReadOnly = true;
             this.txtProdUnCom5.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom5.TabIndex = 7;
             // 
@@ -1138,6 +1192,7 @@
             // 
             this.txProdQuant4.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant4.Name = "txProdQuant4";
+            this.txProdQuant4.ReadOnly = true;
             this.txProdQuant4.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant4.TabIndex = 8;
             // 
@@ -1154,6 +1209,7 @@
             // 
             this.txtProdNum4.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum4.Name = "txtProdNum4";
+            this.txtProdNum4.ReadOnly = true;
             this.txtProdNum4.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum4.TabIndex = 5;
             // 
@@ -1161,6 +1217,7 @@
             // 
             this.txtProdDesc4.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc4.Name = "txtProdDesc4";
+            this.txtProdDesc4.ReadOnly = true;
             this.txtProdDesc4.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc4.TabIndex = 9;
             // 
@@ -1168,6 +1225,7 @@
             // 
             this.txtProdVlr4.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr4.Name = "txtProdVlr4";
+            this.txtProdVlr4.ReadOnly = true;
             this.txtProdVlr4.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr4.TabIndex = 6;
             // 
@@ -1175,6 +1233,7 @@
             // 
             this.txtProdUnCom4.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom4.Name = "txtProdUnCom4";
+            this.txtProdUnCom4.ReadOnly = true;
             this.txtProdUnCom4.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom4.TabIndex = 7;
             // 
@@ -1195,6 +1254,7 @@
             // 
             this.txProdQuant3.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant3.Name = "txProdQuant3";
+            this.txProdQuant3.ReadOnly = true;
             this.txProdQuant3.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant3.TabIndex = 8;
             // 
@@ -1211,6 +1271,7 @@
             // 
             this.txtProdNum3.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum3.Name = "txtProdNum3";
+            this.txtProdNum3.ReadOnly = true;
             this.txtProdNum3.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum3.TabIndex = 5;
             // 
@@ -1218,6 +1279,7 @@
             // 
             this.txtProdDesc3.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc3.Name = "txtProdDesc3";
+            this.txtProdDesc3.ReadOnly = true;
             this.txtProdDesc3.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc3.TabIndex = 9;
             // 
@@ -1225,6 +1287,7 @@
             // 
             this.txtProdVlr3.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr3.Name = "txtProdVlr3";
+            this.txtProdVlr3.ReadOnly = true;
             this.txtProdVlr3.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr3.TabIndex = 6;
             // 
@@ -1232,6 +1295,7 @@
             // 
             this.txtProdUnCom3.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom3.Name = "txtProdUnCom3";
+            this.txtProdUnCom3.ReadOnly = true;
             this.txtProdUnCom3.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom3.TabIndex = 7;
             // 
@@ -1252,6 +1316,7 @@
             // 
             this.txProdQuant2.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant2.Name = "txProdQuant2";
+            this.txProdQuant2.ReadOnly = true;
             this.txProdQuant2.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant2.TabIndex = 8;
             // 
@@ -1268,6 +1333,7 @@
             // 
             this.txtProdNum2.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum2.Name = "txtProdNum2";
+            this.txtProdNum2.ReadOnly = true;
             this.txtProdNum2.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum2.TabIndex = 5;
             // 
@@ -1275,6 +1341,7 @@
             // 
             this.txtProdDesc2.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc2.Name = "txtProdDesc2";
+            this.txtProdDesc2.ReadOnly = true;
             this.txtProdDesc2.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc2.TabIndex = 9;
             // 
@@ -1282,6 +1349,7 @@
             // 
             this.txtProdVlr2.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr2.Name = "txtProdVlr2";
+            this.txtProdVlr2.ReadOnly = true;
             this.txtProdVlr2.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr2.TabIndex = 6;
             // 
@@ -1289,6 +1357,7 @@
             // 
             this.txtProdUnCom2.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom2.Name = "txtProdUnCom2";
+            this.txtProdUnCom2.ReadOnly = true;
             this.txtProdUnCom2.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom2.TabIndex = 7;
             // 
@@ -1309,6 +1378,7 @@
             // 
             this.txProdQuant1.Location = new System.Drawing.Point(296, 8);
             this.txProdQuant1.Name = "txProdQuant1";
+            this.txProdQuant1.ReadOnly = true;
             this.txProdQuant1.Size = new System.Drawing.Size(90, 26);
             this.txProdQuant1.TabIndex = 8;
             // 
@@ -1325,6 +1395,7 @@
             // 
             this.txtProdNum1.Location = new System.Drawing.Point(30, 8);
             this.txtProdNum1.Name = "txtProdNum1";
+            this.txtProdNum1.ReadOnly = true;
             this.txtProdNum1.Size = new System.Drawing.Size(44, 26);
             this.txtProdNum1.TabIndex = 5;
             // 
@@ -1332,6 +1403,7 @@
             // 
             this.txtProdDesc1.Location = new System.Drawing.Point(80, 8);
             this.txtProdDesc1.Name = "txtProdDesc1";
+            this.txtProdDesc1.ReadOnly = true;
             this.txtProdDesc1.Size = new System.Drawing.Size(211, 26);
             this.txtProdDesc1.TabIndex = 9;
             // 
@@ -1339,6 +1411,7 @@
             // 
             this.txtProdVlr1.Location = new System.Drawing.Point(509, 8);
             this.txtProdVlr1.Name = "txtProdVlr1";
+            this.txtProdVlr1.ReadOnly = true;
             this.txtProdVlr1.Size = new System.Drawing.Size(105, 26);
             this.txtProdVlr1.TabIndex = 6;
             // 
@@ -1346,6 +1419,7 @@
             // 
             this.txtProdUnCom1.Location = new System.Drawing.Point(391, 8);
             this.txtProdUnCom1.Name = "txtProdUnCom1";
+            this.txtProdUnCom1.ReadOnly = true;
             this.txtProdUnCom1.Size = new System.Drawing.Size(113, 26);
             this.txtProdUnCom1.TabIndex = 7;
             // 
@@ -1400,7 +1474,7 @@
             this.tbTot.Location = new System.Drawing.Point(4, 29);
             this.tbTot.Name = "tbTot";
             this.tbTot.Padding = new System.Windows.Forms.Padding(3);
-            this.tbTot.Size = new System.Drawing.Size(630, 475);
+            this.tbTot.Size = new System.Drawing.Size(630, 481);
             this.tbTot.TabIndex = 3;
             this.tbTot.Text = "Totais";
             this.tbTot.UseVisualStyleBackColor = true;
@@ -1472,6 +1546,7 @@
             // 
             this.TxtTotProdutos.Location = new System.Drawing.Point(380, 443);
             this.TxtTotProdutos.Name = "TxtTotProdutos";
+            this.TxtTotProdutos.ReadOnly = true;
             this.TxtTotProdutos.Size = new System.Drawing.Size(237, 26);
             this.TxtTotProdutos.TabIndex = 80;
             // 
@@ -1479,6 +1554,7 @@
             // 
             this.txtTotNfe.Location = new System.Drawing.Point(138, 443);
             this.txtTotNfe.Name = "txtTotNfe";
+            this.txtTotNfe.ReadOnly = true;
             this.txtTotNfe.Size = new System.Drawing.Size(231, 26);
             this.txtTotNfe.TabIndex = 79;
             // 
@@ -1504,6 +1580,7 @@
             // 
             this.txtAproxTributos.Location = new System.Drawing.Point(308, 384);
             this.txtAproxTributos.Name = "txtAproxTributos";
+            this.txtAproxTributos.ReadOnly = true;
             this.txtAproxTributos.Size = new System.Drawing.Size(309, 26);
             this.txtAproxTributos.TabIndex = 76;
             // 
@@ -1511,6 +1588,7 @@
             // 
             this.txtOutrasDespesas.Location = new System.Drawing.Point(13, 384);
             this.txtOutrasDespesas.Name = "txtOutrasDespesas";
+            this.txtOutrasDespesas.ReadOnly = true;
             this.txtOutrasDespesas.Size = new System.Drawing.Size(286, 26);
             this.txtOutrasDespesas.TabIndex = 75;
             // 
@@ -1518,6 +1596,7 @@
             // 
             this.txtCOFINS.Location = new System.Drawing.Point(460, 320);
             this.txtCOFINS.Name = "txtCOFINS";
+            this.txtCOFINS.ReadOnly = true;
             this.txtCOFINS.Size = new System.Drawing.Size(157, 26);
             this.txtCOFINS.TabIndex = 74;
             // 
@@ -1525,6 +1604,7 @@
             // 
             this.txtIPIDevolvido.Location = new System.Drawing.Point(160, 320);
             this.txtIPIDevolvido.Name = "txtIPIDevolvido";
+            this.txtIPIDevolvido.ReadOnly = true;
             this.txtIPIDevolvido.Size = new System.Drawing.Size(146, 26);
             this.txtIPIDevolvido.TabIndex = 73;
             // 
@@ -1586,6 +1666,7 @@
             // 
             this.txtBaseCalcICMSST.Location = new System.Drawing.Point(308, 128);
             this.txtBaseCalcICMSST.Name = "txtBaseCalcICMSST";
+            this.txtBaseCalcICMSST.ReadOnly = true;
             this.txtBaseCalcICMSST.Size = new System.Drawing.Size(167, 26);
             this.txtBaseCalcICMSST.TabIndex = 66;
             // 
@@ -1593,6 +1674,7 @@
             // 
             this.txtICMSRemetente.Location = new System.Drawing.Point(13, 128);
             this.txtICMSRemetente.Name = "txtICMSRemetente";
+            this.txtICMSRemetente.ReadOnly = true;
             this.txtICMSRemetente.Size = new System.Drawing.Size(143, 26);
             this.txtICMSRemetente.TabIndex = 65;
             // 
@@ -1717,6 +1799,7 @@
             // 
             this.txtICMSFCP.Location = new System.Drawing.Point(481, 128);
             this.txtICMSFCP.Name = "txtICMSFCP";
+            this.txtICMSFCP.ReadOnly = true;
             this.txtICMSFCP.Size = new System.Drawing.Size(134, 26);
             this.txtICMSFCP.TabIndex = 47;
             // 
@@ -1724,6 +1807,7 @@
             // 
             this.txtFCP.Location = new System.Drawing.Point(481, 64);
             this.txtFCP.Name = "txtFCP";
+            this.txtFCP.ReadOnly = true;
             this.txtFCP.Size = new System.Drawing.Size(134, 26);
             this.txtFCP.TabIndex = 46;
             // 
@@ -1731,6 +1815,7 @@
             // 
             this.txtICMSRetST.Location = new System.Drawing.Point(185, 192);
             this.txtICMSRetST.Name = "txtICMSRetST";
+            this.txtICMSRetST.ReadOnly = true;
             this.txtICMSRetST.Size = new System.Drawing.Size(144, 26);
             this.txtICMSRetST.TabIndex = 45;
             // 
@@ -1738,6 +1823,7 @@
             // 
             this.txtIPI.Location = new System.Drawing.Point(13, 320);
             this.txtIPI.Name = "txtIPI";
+            this.txtIPI.ReadOnly = true;
             this.txtIPI.Size = new System.Drawing.Size(138, 26);
             this.txtIPI.TabIndex = 44;
             // 
@@ -1745,6 +1831,7 @@
             // 
             this.txtDescontos.Location = new System.Drawing.Point(420, 256);
             this.txtDescontos.Name = "txtDescontos";
+            this.txtDescontos.ReadOnly = true;
             this.txtDescontos.Size = new System.Drawing.Size(195, 26);
             this.txtDescontos.TabIndex = 43;
             // 
@@ -1752,6 +1839,7 @@
             // 
             this.txtICMSRetAntST.Location = new System.Drawing.Point(335, 192);
             this.txtICMSRetAntST.Name = "txtICMSRetAntST";
+            this.txtICMSRetAntST.ReadOnly = true;
             this.txtICMSRetAntST.Size = new System.Drawing.Size(282, 26);
             this.txtICMSRetAntST.TabIndex = 42;
             // 
@@ -1759,6 +1847,7 @@
             // 
             this.txtICMSDestino.Location = new System.Drawing.Point(160, 128);
             this.txtICMSDestino.Name = "txtICMSDestino";
+            this.txtICMSDestino.ReadOnly = true;
             this.txtICMSDestino.Size = new System.Drawing.Size(143, 26);
             this.txtICMSDestino.TabIndex = 41;
             // 
@@ -1766,6 +1855,7 @@
             // 
             this.txtICMSSubstituicao.Location = new System.Drawing.Point(13, 192);
             this.txtICMSSubstituicao.Name = "txtICMSSubstituicao";
+            this.txtICMSSubstituicao.ReadOnly = true;
             this.txtICMSSubstituicao.Size = new System.Drawing.Size(166, 26);
             this.txtICMSSubstituicao.TabIndex = 40;
             // 
@@ -1773,6 +1863,7 @@
             // 
             this.txtFrete.Location = new System.Drawing.Point(13, 256);
             this.txtFrete.Name = "txtFrete";
+            this.txtFrete.ReadOnly = true;
             this.txtFrete.Size = new System.Drawing.Size(180, 26);
             this.txtFrete.TabIndex = 38;
             // 
@@ -1780,6 +1871,7 @@
             // 
             this.txtSeguro.Location = new System.Drawing.Point(203, 256);
             this.txtSeguro.Name = "txtSeguro";
+            this.txtSeguro.ReadOnly = true;
             this.txtSeguro.Size = new System.Drawing.Size(208, 26);
             this.txtSeguro.TabIndex = 36;
             // 
@@ -1787,6 +1879,7 @@
             // 
             this.txtPIS.Location = new System.Drawing.Point(311, 320);
             this.txtPIS.Name = "txtPIS";
+            this.txtPIS.ReadOnly = true;
             this.txtPIS.Size = new System.Drawing.Size(143, 26);
             this.txtPIS.TabIndex = 35;
             // 
@@ -1794,6 +1887,7 @@
             // 
             this.txtICMSDesonerado.Location = new System.Drawing.Point(287, 64);
             this.txtICMSDesonerado.Name = "txtICMSDesonerado";
+            this.txtICMSDesonerado.ReadOnly = true;
             this.txtICMSDesonerado.Size = new System.Drawing.Size(188, 26);
             this.txtICMSDesonerado.TabIndex = 34;
             // 
@@ -1801,6 +1895,7 @@
             // 
             this.txtICMS.Location = new System.Drawing.Point(170, 64);
             this.txtICMS.Name = "txtICMS";
+            this.txtICMS.ReadOnly = true;
             this.txtICMS.Size = new System.Drawing.Size(111, 26);
             this.txtICMS.TabIndex = 33;
             // 
@@ -1808,6 +1903,7 @@
             // 
             this.txtBaseICMS.Location = new System.Drawing.Point(13, 64);
             this.txtBaseICMS.Name = "txtBaseICMS";
+            this.txtBaseICMS.ReadOnly = true;
             this.txtBaseICMS.Size = new System.Drawing.Size(151, 26);
             this.txtBaseICMS.TabIndex = 32;
             // 
@@ -1819,10 +1915,59 @@
             this.tbInfAdc.Location = new System.Drawing.Point(4, 29);
             this.tbInfAdc.Name = "tbInfAdc";
             this.tbInfAdc.Padding = new System.Windows.Forms.Padding(3);
-            this.tbInfAdc.Size = new System.Drawing.Size(630, 475);
+            this.tbInfAdc.Size = new System.Drawing.Size(630, 481);
             this.tbInfAdc.TabIndex = 4;
             this.tbInfAdc.Text = "Inf. Adicionais";
             this.tbInfAdc.UseVisualStyleBackColor = true;
+            // 
+            // gpInfAdc
+            // 
+            this.gpInfAdc.Controls.Add(this.txtCompl);
+            this.gpInfAdc.Controls.Add(this.lblCompCont);
+            this.gpInfAdc.Controls.Add(this.txtFisco);
+            this.gpInfAdc.Controls.Add(this.lblFisco);
+            this.gpInfAdc.Location = new System.Drawing.Point(6, 174);
+            this.gpInfAdc.Name = "gpInfAdc";
+            this.gpInfAdc.Size = new System.Drawing.Size(612, 298);
+            this.gpInfAdc.TabIndex = 6;
+            this.gpInfAdc.TabStop = false;
+            this.gpInfAdc.Text = "Outros";
+            // 
+            // txtCompl
+            // 
+            this.txtCompl.Location = new System.Drawing.Point(6, 183);
+            this.txtCompl.Multiline = true;
+            this.txtCompl.Name = "txtCompl";
+            this.txtCompl.ReadOnly = true;
+            this.txtCompl.Size = new System.Drawing.Size(600, 109);
+            this.txtCompl.TabIndex = 7;
+            // 
+            // lblCompCont
+            // 
+            this.lblCompCont.AutoSize = true;
+            this.lblCompCont.Location = new System.Drawing.Point(2, 160);
+            this.lblCompCont.Name = "lblCompCont";
+            this.lblCompCont.Size = new System.Drawing.Size(448, 20);
+            this.lblCompCont.TabIndex = 6;
+            this.lblCompCont.Text = "Informações Complementares de Interesse do Contribuinte";
+            // 
+            // txtFisco
+            // 
+            this.txtFisco.Location = new System.Drawing.Point(6, 48);
+            this.txtFisco.Multiline = true;
+            this.txtFisco.Name = "txtFisco";
+            this.txtFisco.ReadOnly = true;
+            this.txtFisco.Size = new System.Drawing.Size(600, 109);
+            this.txtFisco.TabIndex = 5;
+            // 
+            // lblFisco
+            // 
+            this.lblFisco.AutoSize = true;
+            this.lblFisco.Location = new System.Drawing.Point(2, 25);
+            this.lblFisco.Name = "lblFisco";
+            this.lblFisco.Size = new System.Drawing.Size(349, 20);
+            this.lblFisco.TabIndex = 0;
+            this.lblFisco.Text = "Informações Adicionais de Interesse do Fisco";
             // 
             // gpCobranca
             // 
@@ -1843,6 +1988,7 @@
             // 
             this.txtVlrPgmto.Location = new System.Drawing.Point(417, 47);
             this.txtVlrPgmto.Name = "txtVlrPgmto";
+            this.txtVlrPgmto.ReadOnly = true;
             this.txtVlrPgmto.Size = new System.Drawing.Size(189, 26);
             this.txtVlrPgmto.TabIndex = 5;
             // 
@@ -1868,6 +2014,7 @@
             // 
             this.txtMeioPgmto.Location = new System.Drawing.Point(203, 47);
             this.txtMeioPgmto.Name = "txtMeioPgmto";
+            this.txtMeioPgmto.ReadOnly = true;
             this.txtMeioPgmto.Size = new System.Drawing.Size(208, 26);
             this.txtMeioPgmto.TabIndex = 3;
             // 
@@ -1875,6 +2022,7 @@
             // 
             this.txtIndFormPgmto.Location = new System.Drawing.Point(6, 47);
             this.txtIndFormPgmto.Name = "txtIndFormPgmto";
+            this.txtIndFormPgmto.ReadOnly = true;
             this.txtIndFormPgmto.Size = new System.Drawing.Size(191, 26);
             this.txtIndFormPgmto.TabIndex = 1;
             // 
@@ -1902,6 +2050,7 @@
             // 
             this.txtModFrete.Location = new System.Drawing.Point(6, 51);
             this.txtModFrete.Name = "txtModFrete";
+            this.txtModFrete.ReadOnly = true;
             this.txtModFrete.Size = new System.Drawing.Size(600, 26);
             this.txtModFrete.TabIndex = 3;
             // 
@@ -1914,109 +2063,22 @@
             this.lblModalidadeFrete.TabIndex = 2;
             this.lblModalidadeFrete.Text = "Modalidade Frete";
             // 
-            // gpInfAdc
+            // lblIE
             // 
-            this.gpInfAdc.Controls.Add(this.txtCompl);
-            this.gpInfAdc.Controls.Add(this.lblCompCont);
-            this.gpInfAdc.Controls.Add(this.txtFisco);
-            this.gpInfAdc.Controls.Add(this.lblFisco);
-            this.gpInfAdc.Location = new System.Drawing.Point(6, 174);
-            this.gpInfAdc.Name = "gpInfAdc";
-            this.gpInfAdc.Size = new System.Drawing.Size(612, 298);
-            this.gpInfAdc.TabIndex = 6;
-            this.gpInfAdc.TabStop = false;
-            this.gpInfAdc.Text = "Outros";
+            this.lblIE.AutoSize = true;
+            this.lblIE.Location = new System.Drawing.Point(14, 243);
+            this.lblIE.Name = "lblIE";
+            this.lblIE.Size = new System.Drawing.Size(24, 20);
+            this.lblIE.TabIndex = 22;
+            this.lblIE.Text = "IE";
             // 
-            // txtFisco
+            // txtEmitIE
             // 
-            this.txtFisco.Location = new System.Drawing.Point(6, 48);
-            this.txtFisco.Multiline = true;
-            this.txtFisco.Name = "txtFisco";
-            this.txtFisco.Size = new System.Drawing.Size(600, 109);
-            this.txtFisco.TabIndex = 5;
-            // 
-            // lblFisco
-            // 
-            this.lblFisco.AutoSize = true;
-            this.lblFisco.Location = new System.Drawing.Point(2, 25);
-            this.lblFisco.Name = "lblFisco";
-            this.lblFisco.Size = new System.Drawing.Size(349, 20);
-            this.lblFisco.TabIndex = 0;
-            this.lblFisco.Text = "Informações Adicionais de Interesse do Fisco";
-            // 
-            // txtCompl
-            // 
-            this.txtCompl.Location = new System.Drawing.Point(6, 183);
-            this.txtCompl.Multiline = true;
-            this.txtCompl.Name = "txtCompl";
-            this.txtCompl.Size = new System.Drawing.Size(600, 109);
-            this.txtCompl.TabIndex = 7;
-            // 
-            // lblCompCont
-            // 
-            this.lblCompCont.AutoSize = true;
-            this.lblCompCont.Location = new System.Drawing.Point(2, 160);
-            this.lblCompCont.Name = "lblCompCont";
-            this.lblCompCont.Size = new System.Drawing.Size(448, 20);
-            this.lblCompCont.TabIndex = 6;
-            this.lblCompCont.Text = "Informações Complementares de Interesse do Contribuinte";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.txProdQuant9);
-            this.panel8.Controls.Add(this.button8);
-            this.panel8.Controls.Add(this.txtProdNum9);
-            this.panel8.Controls.Add(this.txtProdDesc9);
-            this.panel8.Controls.Add(this.txtProdVlr9);
-            this.panel8.Controls.Add(this.txtProdUnCom9);
-            this.panel8.Location = new System.Drawing.Point(6, 428);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(617, 44);
-            this.panel8.TabIndex = 19;
-            // 
-            // txProdQuant9
-            // 
-            this.txProdQuant9.Location = new System.Drawing.Point(296, 8);
-            this.txProdQuant9.Name = "txProdQuant9";
-            this.txProdQuant9.Size = new System.Drawing.Size(90, 26);
-            this.txProdQuant9.TabIndex = 8;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(3, 8);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(19, 27);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "+";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // txtProdNum9
-            // 
-            this.txtProdNum9.Location = new System.Drawing.Point(30, 8);
-            this.txtProdNum9.Name = "txtProdNum9";
-            this.txtProdNum9.Size = new System.Drawing.Size(44, 26);
-            this.txtProdNum9.TabIndex = 5;
-            // 
-            // txtProdDesc9
-            // 
-            this.txtProdDesc9.Location = new System.Drawing.Point(80, 8);
-            this.txtProdDesc9.Name = "txtProdDesc9";
-            this.txtProdDesc9.Size = new System.Drawing.Size(211, 26);
-            this.txtProdDesc9.TabIndex = 9;
-            // 
-            // txtProdVlr9
-            // 
-            this.txtProdVlr9.Location = new System.Drawing.Point(509, 8);
-            this.txtProdVlr9.Name = "txtProdVlr9";
-            this.txtProdVlr9.Size = new System.Drawing.Size(105, 26);
-            this.txtProdVlr9.TabIndex = 6;
-            // 
-            // txtProdUnCom9
-            // 
-            this.txtProdUnCom9.Location = new System.Drawing.Point(391, 8);
-            this.txtProdUnCom9.Name = "txtProdUnCom9";
-            this.txtProdUnCom9.Size = new System.Drawing.Size(113, 26);
-            this.txtProdUnCom9.TabIndex = 7;
+            this.txtEmitIE.Location = new System.Drawing.Point(86, 235);
+            this.txtEmitIE.Name = "txtEmitIE";
+            this.txtEmitIE.ReadOnly = true;
+            this.txtEmitIE.Size = new System.Drawing.Size(265, 26);
+            this.txtEmitIE.TabIndex = 6;
             // 
             // Principal
             // 
@@ -2038,6 +2100,8 @@
             this.tbDest.PerformLayout();
             this.tbProd.ResumeLayout(false);
             this.tbProd.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -2058,14 +2122,12 @@
             this.gpTot.ResumeLayout(false);
             this.gpTot.PerformLayout();
             this.tbInfAdc.ResumeLayout(false);
+            this.gpInfAdc.ResumeLayout(false);
+            this.gpInfAdc.PerformLayout();
             this.gpCobranca.ResumeLayout(false);
             this.gpCobranca.PerformLayout();
             this.gpTransp.ResumeLayout(false);
             this.gpTransp.PerformLayout();
-            this.gpInfAdc.ResumeLayout(false);
-            this.gpInfAdc.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2084,37 +2146,31 @@
         private System.Windows.Forms.TabPage tbTot;
         private System.Windows.Forms.TabPage tbInfAdc;
         private System.Windows.Forms.Label lblTelefone;
-        private System.Windows.Forms.Label lblCNAE;
         private System.Windows.Forms.Label lblCodRegTrib;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblIM;
         private System.Windows.Forms.Label IESubstitutoTributario;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblUF;
         private System.Windows.Forms.Label lblCep;
-        private System.Windows.Forms.Label lblIE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblCnpj;
         private System.Windows.Forms.Label lblNFantasia;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmitEnd;
+        private System.Windows.Forms.TextBox txtEmitTel;
+        private System.Windows.Forms.TextBox txtEmitCEP;
+        private System.Windows.Forms.TextBox txtEmitIETrib;
+        private System.Windows.Forms.TextBox txtEmitUF;
+        private System.Windows.Forms.TextBox txtEmitBairro;
+        private System.Windows.Forms.TextBox txtEmitMun;
+        private System.Windows.Forms.TextBox txtEmitCdRegTrib;
+        private System.Windows.Forms.TextBox txtEmitPais;
+        private System.Windows.Forms.TextBox txtEmitMunOcorrFGICMS;
+        private System.Windows.Forms.TextBox txtEmitCNPJ;
+        private System.Windows.Forms.TextBox txtEmitNomeF;
+        private System.Windows.Forms.TextBox txtEmitNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -2271,5 +2327,7 @@
         private System.Windows.Forms.TextBox txtProdDesc9;
         private System.Windows.Forms.TextBox txtProdVlr9;
         private System.Windows.Forms.TextBox txtProdUnCom9;
+        private System.Windows.Forms.Label lblIE;
+        private System.Windows.Forms.TextBox txtEmitIE;
     }
 }

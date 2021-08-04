@@ -720,6 +720,8 @@ namespace NFe_SeniorSistemas.Classes
 
         private string xPaisField;
 
+        private string xFoneField;
+
         /// <remarks/>
         public string xLgr
         {
@@ -834,6 +836,17 @@ namespace NFe_SeniorSistemas.Classes
             set
             {
                 this.xPaisField = value;
+            }
+        }
+        public string xFone
+        {
+            get
+            {
+                return this.xFoneField;
+            }
+            set
+            {
+                this.xFoneField = value;
             }
         }
     }
