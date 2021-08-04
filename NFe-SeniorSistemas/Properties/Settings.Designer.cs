@@ -38,7 +38,7 @@ namespace NFe_SeniorSistemas.Properties {
         {
             get
             {
-                return ("nfeseniornfe@gmail.com");
+                return ("email aqui");
             }
         }
 
@@ -46,7 +46,7 @@ namespace NFe_SeniorSistemas.Properties {
         {
             get
             {
-                return ("Ppee1424@1");
+                return ("senha aqui");
             }
         }
     }
