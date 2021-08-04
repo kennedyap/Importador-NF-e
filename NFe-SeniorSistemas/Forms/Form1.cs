@@ -45,11 +45,13 @@ namespace NFe_SeniorSistemas
                 {
                     if (dt.Rows.Count > 0)
                     {
-                        MessageBox.Show("A");
+                        this.Hide();
+                        Principal pr = new Principal();
+                        pr.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Nenhum Usuário encontrado com estes parêmetros, tente novamente.");
+                        MessageBox.Show("Nenhum Usuário encontrado com estes parêmetros, tente novamente.", "Nenhum Usuário Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtUsuario.Text = "";
                         txtSenha.Text = "";
                         txtUsuario.Focus();
@@ -66,11 +68,8 @@ namespace NFe_SeniorSistemas
         private void lblCadastro_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //Cadastro frmCadastro = new Cadastro();
-            //frmCadastro.Show();
-
-            Principal pr = new Principal();
-            pr.Show();
+            Cadastro frmCadastro = new Cadastro();
+            frmCadastro.Show();
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
@@ -93,7 +92,7 @@ namespace NFe_SeniorSistemas
 
                         StringBuilder str = new StringBuilder();
 
-                        for (int i = 0; i < 10; i++)
+                        for (int i = 0; i < 15; i++)
                         {
                             int aleatorio = rnd.Next(0, senhaBase.Length);
                             str.Append(senhaBase[aleatorio].ToString());
@@ -141,12 +140,12 @@ namespace NFe_SeniorSistemas
                 }
                 else
                 {
-                    MessageBox.Show("Por Favor, adicione o seu UserName para a recuperação de senha");
+                    MessageBox.Show("Nenhum usuário encontrado com as informações fornecidas, você tem certeza que digitou tudo corretamente?", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Nenhum Usuário encontrado com estes parêmetros, tente novamente.");
+                MessageBox.Show("Para recuperar a senha você deve digitar seu usuário.", "Usuário incorreto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUsuario.Text = "";
                 txtUsuario.Focus();
             }

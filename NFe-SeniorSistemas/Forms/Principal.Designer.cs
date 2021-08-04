@@ -92,6 +92,12 @@
             this.txtDestCPF = new System.Windows.Forms.TextBox();
             this.txtDestNome = new System.Windows.Forms.TextBox();
             this.tbProd = new System.Windows.Forms.TabPage();
+            this.lstProdutos = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.quantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vlrUnitario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vlrTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbTot = new System.Windows.Forms.TabPage();
             this.gpTot = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -107,8 +113,6 @@
             this.lblOutras = new System.Windows.Forms.Label();
             this.lblCofins = new System.Windows.Forms.Label();
             this.lblVlrPIS = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblVlrTotICMSRetST = new System.Windows.Forms.Label();
             this.txtBaseCalcICMSST = new System.Windows.Forms.TextBox();
             this.txtICMSRemetente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -119,19 +123,15 @@
             this.lblVlrSeguro = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.lblFrete = new System.Windows.Forms.Label();
-            this.lblVlrICMSSubs = new System.Windows.Forms.Label();
             this.lblICMSDEST = new System.Windows.Forms.Label();
             this.lblICMDEsonerado = new System.Windows.Forms.Label();
             this.lblVlrICMS = new System.Windows.Forms.Label();
             this.lblBaseIcms = new System.Windows.Forms.Label();
             this.txtICMSFCP = new System.Windows.Forms.TextBox();
             this.txtFCP = new System.Windows.Forms.TextBox();
-            this.txtICMSRetST = new System.Windows.Forms.TextBox();
             this.txtIPI = new System.Windows.Forms.TextBox();
             this.txtDescontos = new System.Windows.Forms.TextBox();
-            this.txtICMSRetAntST = new System.Windows.Forms.TextBox();
             this.txtICMSDestino = new System.Windows.Forms.TextBox();
-            this.txtICMSSubstituicao = new System.Windows.Forms.TextBox();
             this.txtFrete = new System.Windows.Forms.TextBox();
             this.txtSeguro = new System.Windows.Forms.TextBox();
             this.txtPIS = new System.Windows.Forms.TextBox();
@@ -154,12 +154,6 @@
             this.gpTransp = new System.Windows.Forms.GroupBox();
             this.txtModFrete = new System.Windows.Forms.TextBox();
             this.lblModalidadeFrete = new System.Windows.Forms.Label();
-            this.lstProdutos = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.quantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.vlrUnitario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.vlrTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gpXml.SuspendLayout();
             this.gpNFe.SuspendLayout();
             this.tabGeral.SuspendLayout();
@@ -194,6 +188,7 @@
             this.txtXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXML.Location = new System.Drawing.Point(6, 21);
             this.txtXML.Name = "txtXML";
+            this.txtXML.ReadOnly = true;
             this.txtXML.Size = new System.Drawing.Size(487, 26);
             this.txtXML.TabIndex = 1;
             // 
@@ -778,6 +773,47 @@
             this.tbProd.Text = "Produtos";
             this.tbProd.UseVisualStyleBackColor = true;
             // 
+            // lstProdutos
+            // 
+            this.lstProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.descricao,
+            this.quantidade,
+            this.vlrUnitario,
+            this.vlrTotal});
+            this.lstProdutos.HideSelection = false;
+            this.lstProdutos.Location = new System.Drawing.Point(7, 7);
+            this.lstProdutos.Name = "lstProdutos";
+            this.lstProdutos.Size = new System.Drawing.Size(617, 468);
+            this.lstProdutos.TabIndex = 0;
+            this.lstProdutos.UseCompatibleStateImageBehavior = false;
+            this.lstProdutos.View = System.Windows.Forms.View.Details;
+            // 
+            // id
+            // 
+            this.id.Text = "Nr";
+            this.id.Width = 41;
+            // 
+            // descricao
+            // 
+            this.descricao.Text = "Descrição";
+            this.descricao.Width = 117;
+            // 
+            // quantidade
+            // 
+            this.quantidade.Text = "Quantidade";
+            this.quantidade.Width = 119;
+            // 
+            // vlrUnitario
+            // 
+            this.vlrUnitario.Text = "Vlr. Unitário";
+            this.vlrUnitario.Width = 107;
+            // 
+            // vlrTotal
+            // 
+            this.vlrTotal.Text = "Vlr. Total";
+            this.vlrTotal.Width = 127;
+            // 
             // tbTot
             // 
             this.tbTot.Controls.Add(this.gpTot);
@@ -805,8 +841,6 @@
             this.gpTot.Controls.Add(this.lblOutras);
             this.gpTot.Controls.Add(this.lblCofins);
             this.gpTot.Controls.Add(this.lblVlrPIS);
-            this.gpTot.Controls.Add(this.label16);
-            this.gpTot.Controls.Add(this.lblVlrTotICMSRetST);
             this.gpTot.Controls.Add(this.txtBaseCalcICMSST);
             this.gpTot.Controls.Add(this.txtICMSRemetente);
             this.gpTot.Controls.Add(this.label7);
@@ -817,19 +851,15 @@
             this.gpTot.Controls.Add(this.lblVlrSeguro);
             this.gpTot.Controls.Add(this.label24);
             this.gpTot.Controls.Add(this.lblFrete);
-            this.gpTot.Controls.Add(this.lblVlrICMSSubs);
             this.gpTot.Controls.Add(this.lblICMSDEST);
             this.gpTot.Controls.Add(this.lblICMDEsonerado);
             this.gpTot.Controls.Add(this.lblVlrICMS);
             this.gpTot.Controls.Add(this.lblBaseIcms);
             this.gpTot.Controls.Add(this.txtICMSFCP);
             this.gpTot.Controls.Add(this.txtFCP);
-            this.gpTot.Controls.Add(this.txtICMSRetST);
             this.gpTot.Controls.Add(this.txtIPI);
             this.gpTot.Controls.Add(this.txtDescontos);
-            this.gpTot.Controls.Add(this.txtICMSRetAntST);
             this.gpTot.Controls.Add(this.txtICMSDestino);
-            this.gpTot.Controls.Add(this.txtICMSSubstituicao);
             this.gpTot.Controls.Add(this.txtFrete);
             this.gpTot.Controls.Add(this.txtSeguro);
             this.gpTot.Controls.Add(this.txtPIS);
@@ -854,7 +884,7 @@
             // 
             // TxtTotProdutos
             // 
-            this.TxtTotProdutos.Location = new System.Drawing.Point(380, 443);
+            this.TxtTotProdutos.Location = new System.Drawing.Point(318, 418);
             this.TxtTotProdutos.Name = "TxtTotProdutos";
             this.TxtTotProdutos.ReadOnly = true;
             this.TxtTotProdutos.Size = new System.Drawing.Size(237, 26);
@@ -862,7 +892,7 @@
             // 
             // txtTotNfe
             // 
-            this.txtTotNfe.Location = new System.Drawing.Point(138, 443);
+            this.txtTotNfe.Location = new System.Drawing.Point(76, 418);
             this.txtTotNfe.Name = "txtTotNfe";
             this.txtTotNfe.ReadOnly = true;
             this.txtTotNfe.Size = new System.Drawing.Size(231, 26);
@@ -871,7 +901,7 @@
             // lblTotalProdutos
             // 
             this.lblTotalProdutos.AutoSize = true;
-            this.lblTotalProdutos.Location = new System.Drawing.Point(376, 420);
+            this.lblTotalProdutos.Location = new System.Drawing.Point(314, 395);
             this.lblTotalProdutos.Name = "lblTotalProdutos";
             this.lblTotalProdutos.Size = new System.Drawing.Size(148, 20);
             this.lblTotalProdutos.TabIndex = 78;
@@ -880,7 +910,7 @@
             // txtTotalNFe
             // 
             this.txtTotalNFe.AutoSize = true;
-            this.txtTotalNFe.Location = new System.Drawing.Point(134, 420);
+            this.txtTotalNFe.Location = new System.Drawing.Point(72, 395);
             this.txtTotalNFe.Name = "txtTotalNFe";
             this.txtTotalNFe.Size = new System.Drawing.Size(118, 20);
             this.txtTotalNFe.TabIndex = 77;
@@ -888,7 +918,7 @@
             // 
             // txtAproxTributos
             // 
-            this.txtAproxTributos.Location = new System.Drawing.Point(308, 384);
+            this.txtAproxTributos.Location = new System.Drawing.Point(306, 327);
             this.txtAproxTributos.Name = "txtAproxTributos";
             this.txtAproxTributos.ReadOnly = true;
             this.txtAproxTributos.Size = new System.Drawing.Size(309, 26);
@@ -896,7 +926,7 @@
             // 
             // txtOutrasDespesas
             // 
-            this.txtOutrasDespesas.Location = new System.Drawing.Point(13, 384);
+            this.txtOutrasDespesas.Location = new System.Drawing.Point(11, 327);
             this.txtOutrasDespesas.Name = "txtOutrasDespesas";
             this.txtOutrasDespesas.ReadOnly = true;
             this.txtOutrasDespesas.Size = new System.Drawing.Size(286, 26);
@@ -904,7 +934,7 @@
             // 
             // txtCOFINS
             // 
-            this.txtCOFINS.Location = new System.Drawing.Point(460, 320);
+            this.txtCOFINS.Location = new System.Drawing.Point(458, 263);
             this.txtCOFINS.Name = "txtCOFINS";
             this.txtCOFINS.ReadOnly = true;
             this.txtCOFINS.Size = new System.Drawing.Size(157, 26);
@@ -912,7 +942,7 @@
             // 
             // txtIPIDevolvido
             // 
-            this.txtIPIDevolvido.Location = new System.Drawing.Point(160, 320);
+            this.txtIPIDevolvido.Location = new System.Drawing.Point(158, 263);
             this.txtIPIDevolvido.Name = "txtIPIDevolvido";
             this.txtIPIDevolvido.ReadOnly = true;
             this.txtIPIDevolvido.Size = new System.Drawing.Size(146, 26);
@@ -921,7 +951,7 @@
             // lblVlrTributos
             // 
             this.lblVlrTributos.AutoSize = true;
-            this.lblVlrTributos.Location = new System.Drawing.Point(307, 361);
+            this.lblVlrTributos.Location = new System.Drawing.Point(305, 304);
             this.lblVlrTributos.Name = "lblVlrTributos";
             this.lblVlrTributos.Size = new System.Drawing.Size(152, 20);
             this.lblVlrTributos.TabIndex = 72;
@@ -930,7 +960,7 @@
             // lblOutras
             // 
             this.lblOutras.AutoSize = true;
-            this.lblOutras.Location = new System.Drawing.Point(9, 361);
+            this.lblOutras.Location = new System.Drawing.Point(7, 304);
             this.lblOutras.Name = "lblOutras";
             this.lblOutras.Size = new System.Drawing.Size(171, 20);
             this.lblOutras.TabIndex = 71;
@@ -939,7 +969,7 @@
             // lblCofins
             // 
             this.lblCofins.AutoSize = true;
-            this.lblCofins.Location = new System.Drawing.Point(456, 297);
+            this.lblCofins.Location = new System.Drawing.Point(454, 240);
             this.lblCofins.Name = "lblCofins";
             this.lblCofins.Size = new System.Drawing.Size(101, 20);
             this.lblCofins.TabIndex = 70;
@@ -948,29 +978,11 @@
             // lblVlrPIS
             // 
             this.lblVlrPIS.AutoSize = true;
-            this.lblVlrPIS.Location = new System.Drawing.Point(307, 297);
+            this.lblVlrPIS.Location = new System.Drawing.Point(305, 240);
             this.lblVlrPIS.Name = "lblVlrPIS";
             this.lblVlrPIS.Size = new System.Drawing.Size(65, 20);
             this.lblVlrPIS.TabIndex = 69;
             this.lblVlrPIS.Text = "Vlr. PIS";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(335, 169);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(258, 20);
-            this.label16.TabIndex = 68;
-            this.label16.Text = "Vlr. ICM Retido Anteriormente ST";
-            // 
-            // lblVlrTotICMSRetST
-            // 
-            this.lblVlrTotICMSRetST.AutoSize = true;
-            this.lblVlrTotICMSRetST.Location = new System.Drawing.Point(181, 169);
-            this.lblVlrTotICMSRetST.Name = "lblVlrTotICMSRetST";
-            this.lblVlrTotICMSRetST.Size = new System.Drawing.Size(148, 20);
-            this.lblVlrTotICMSRetST.TabIndex = 67;
-            this.lblVlrTotICMSRetST.Text = "Vlr. ICM Retido ST";
             // 
             // txtBaseCalcICMSST
             // 
@@ -1009,7 +1021,7 @@
             // lblVlrIpiDevolvido
             // 
             this.lblVlrIpiDevolvido.AutoSize = true;
-            this.lblVlrIpiDevolvido.Location = new System.Drawing.Point(156, 297);
+            this.lblVlrIpiDevolvido.Location = new System.Drawing.Point(154, 240);
             this.lblVlrIpiDevolvido.Name = "lblVlrIpiDevolvido";
             this.lblVlrIpiDevolvido.Size = new System.Drawing.Size(136, 20);
             this.lblVlrIpiDevolvido.TabIndex = 60;
@@ -1018,7 +1030,7 @@
             // lblVlrIPI
             // 
             this.lblVlrIPI.AutoSize = true;
-            this.lblVlrIPI.Location = new System.Drawing.Point(9, 297);
+            this.lblVlrIPI.Location = new System.Drawing.Point(7, 240);
             this.lblVlrIPI.Name = "lblVlrIPI";
             this.lblVlrIPI.Size = new System.Drawing.Size(58, 20);
             this.lblVlrIPI.TabIndex = 59;
@@ -1027,7 +1039,7 @@
             // lblDescontos
             // 
             this.lblDescontos.AutoSize = true;
-            this.lblDescontos.Location = new System.Drawing.Point(416, 233);
+            this.lblDescontos.Location = new System.Drawing.Point(414, 176);
             this.lblDescontos.Name = "lblDescontos";
             this.lblDescontos.Size = new System.Drawing.Size(120, 20);
             this.lblDescontos.TabIndex = 58;
@@ -1036,7 +1048,7 @@
             // lblVlrSeguro
             // 
             this.lblVlrSeguro.AutoSize = true;
-            this.lblVlrSeguro.Location = new System.Drawing.Point(199, 233);
+            this.lblVlrSeguro.Location = new System.Drawing.Point(197, 176);
             this.lblVlrSeguro.Name = "lblVlrSeguro";
             this.lblVlrSeguro.Size = new System.Drawing.Size(92, 20);
             this.lblVlrSeguro.TabIndex = 57;
@@ -1054,20 +1066,11 @@
             // lblFrete
             // 
             this.lblFrete.AutoSize = true;
-            this.lblFrete.Location = new System.Drawing.Point(9, 233);
+            this.lblFrete.Location = new System.Drawing.Point(7, 176);
             this.lblFrete.Name = "lblFrete";
             this.lblFrete.Size = new System.Drawing.Size(48, 20);
             this.lblFrete.TabIndex = 54;
             this.lblFrete.Text = "Frete";
-            // 
-            // lblVlrICMSSubs
-            // 
-            this.lblVlrICMSSubs.AutoSize = true;
-            this.lblVlrICMSSubs.Location = new System.Drawing.Point(6, 169);
-            this.lblVlrICMSSubs.Name = "lblVlrICMSSubs";
-            this.lblVlrICMSSubs.Size = new System.Drawing.Size(154, 20);
-            this.lblVlrICMSSubs.TabIndex = 53;
-            this.lblVlrICMSSubs.Text = "Vlr. ICMS Substitui.";
             // 
             // lblICMSDEST
             // 
@@ -1121,17 +1124,9 @@
             this.txtFCP.Size = new System.Drawing.Size(134, 26);
             this.txtFCP.TabIndex = 46;
             // 
-            // txtICMSRetST
-            // 
-            this.txtICMSRetST.Location = new System.Drawing.Point(185, 192);
-            this.txtICMSRetST.Name = "txtICMSRetST";
-            this.txtICMSRetST.ReadOnly = true;
-            this.txtICMSRetST.Size = new System.Drawing.Size(144, 26);
-            this.txtICMSRetST.TabIndex = 45;
-            // 
             // txtIPI
             // 
-            this.txtIPI.Location = new System.Drawing.Point(13, 320);
+            this.txtIPI.Location = new System.Drawing.Point(11, 263);
             this.txtIPI.Name = "txtIPI";
             this.txtIPI.ReadOnly = true;
             this.txtIPI.Size = new System.Drawing.Size(138, 26);
@@ -1139,19 +1134,11 @@
             // 
             // txtDescontos
             // 
-            this.txtDescontos.Location = new System.Drawing.Point(420, 256);
+            this.txtDescontos.Location = new System.Drawing.Point(418, 199);
             this.txtDescontos.Name = "txtDescontos";
             this.txtDescontos.ReadOnly = true;
             this.txtDescontos.Size = new System.Drawing.Size(195, 26);
             this.txtDescontos.TabIndex = 43;
-            // 
-            // txtICMSRetAntST
-            // 
-            this.txtICMSRetAntST.Location = new System.Drawing.Point(335, 192);
-            this.txtICMSRetAntST.Name = "txtICMSRetAntST";
-            this.txtICMSRetAntST.ReadOnly = true;
-            this.txtICMSRetAntST.Size = new System.Drawing.Size(282, 26);
-            this.txtICMSRetAntST.TabIndex = 42;
             // 
             // txtICMSDestino
             // 
@@ -1161,17 +1148,9 @@
             this.txtICMSDestino.Size = new System.Drawing.Size(143, 26);
             this.txtICMSDestino.TabIndex = 41;
             // 
-            // txtICMSSubstituicao
-            // 
-            this.txtICMSSubstituicao.Location = new System.Drawing.Point(13, 192);
-            this.txtICMSSubstituicao.Name = "txtICMSSubstituicao";
-            this.txtICMSSubstituicao.ReadOnly = true;
-            this.txtICMSSubstituicao.Size = new System.Drawing.Size(166, 26);
-            this.txtICMSSubstituicao.TabIndex = 40;
-            // 
             // txtFrete
             // 
-            this.txtFrete.Location = new System.Drawing.Point(13, 256);
+            this.txtFrete.Location = new System.Drawing.Point(11, 199);
             this.txtFrete.Name = "txtFrete";
             this.txtFrete.ReadOnly = true;
             this.txtFrete.Size = new System.Drawing.Size(180, 26);
@@ -1179,7 +1158,7 @@
             // 
             // txtSeguro
             // 
-            this.txtSeguro.Location = new System.Drawing.Point(203, 256);
+            this.txtSeguro.Location = new System.Drawing.Point(201, 199);
             this.txtSeguro.Name = "txtSeguro";
             this.txtSeguro.ReadOnly = true;
             this.txtSeguro.Size = new System.Drawing.Size(208, 26);
@@ -1187,7 +1166,7 @@
             // 
             // txtPIS
             // 
-            this.txtPIS.Location = new System.Drawing.Point(311, 320);
+            this.txtPIS.Location = new System.Drawing.Point(309, 263);
             this.txtPIS.Name = "txtPIS";
             this.txtPIS.ReadOnly = true;
             this.txtPIS.Size = new System.Drawing.Size(143, 26);
@@ -1373,47 +1352,6 @@
             this.lblModalidadeFrete.TabIndex = 2;
             this.lblModalidadeFrete.Text = "Modalidade Frete";
             // 
-            // lstProdutos
-            // 
-            this.lstProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.descricao,
-            this.quantidade,
-            this.vlrUnitario,
-            this.vlrTotal});
-            this.lstProdutos.HideSelection = false;
-            this.lstProdutos.Location = new System.Drawing.Point(7, 7);
-            this.lstProdutos.Name = "lstProdutos";
-            this.lstProdutos.Size = new System.Drawing.Size(617, 468);
-            this.lstProdutos.TabIndex = 0;
-            this.lstProdutos.UseCompatibleStateImageBehavior = false;
-            this.lstProdutos.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "Nr";
-            this.id.Width = 41;
-            // 
-            // descricao
-            // 
-            this.descricao.Text = "Descrição";
-            this.descricao.Width = 117;
-            // 
-            // quantidade
-            // 
-            this.quantidade.Text = "Quantidade";
-            this.quantidade.Width = 119;
-            // 
-            // vlrUnitario
-            // 
-            this.vlrUnitario.Text = "Vlr. Unitário";
-            this.vlrUnitario.Width = 107;
-            // 
-            // vlrTotal
-            // 
-            this.vlrTotal.Text = "Vlr. Total";
-            this.vlrTotal.Width = 127;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1422,8 +1360,12 @@
             this.Controls.Add(this.gpXml);
             this.Controls.Add(this.gpNFe);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(691, 670);
+            this.MinimumSize = new System.Drawing.Size(691, 670);
             this.Name = "Principal";
             this.Text = "Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.gpXml.ResumeLayout(false);
             this.gpXml.PerformLayout();
             this.gpNFe.ResumeLayout(false);
@@ -1521,8 +1463,6 @@
         private System.Windows.Forms.Label lblOutras;
         private System.Windows.Forms.Label lblCofins;
         private System.Windows.Forms.Label lblVlrPIS;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label lblVlrTotICMSRetST;
         private System.Windows.Forms.TextBox txtBaseCalcICMSST;
         private System.Windows.Forms.TextBox txtICMSRemetente;
         private System.Windows.Forms.Label label7;
@@ -1533,19 +1473,15 @@
         private System.Windows.Forms.Label lblVlrSeguro;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lblFrete;
-        private System.Windows.Forms.Label lblVlrICMSSubs;
         private System.Windows.Forms.Label lblICMSDEST;
         private System.Windows.Forms.Label lblICMDEsonerado;
         private System.Windows.Forms.Label lblVlrICMS;
         private System.Windows.Forms.Label lblBaseIcms;
         private System.Windows.Forms.TextBox txtICMSFCP;
         private System.Windows.Forms.TextBox txtFCP;
-        private System.Windows.Forms.TextBox txtICMSRetST;
         private System.Windows.Forms.TextBox txtIPI;
         private System.Windows.Forms.TextBox txtDescontos;
-        private System.Windows.Forms.TextBox txtICMSRetAntST;
         private System.Windows.Forms.TextBox txtICMSDestino;
-        private System.Windows.Forms.TextBox txtICMSSubstituicao;
         private System.Windows.Forms.TextBox txtFrete;
         private System.Windows.Forms.TextBox txtSeguro;
         private System.Windows.Forms.TextBox txtPIS;

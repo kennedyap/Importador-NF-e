@@ -49,17 +49,10 @@
   <ItemGroup>
     <Compile Include="Banco\BdDados.cs" />
     <Compile Include="Classes\NFe.cs" />
-    <Compile Include="Classes\aNFe.cs" />
     <Compile Include="Connected Services\WsCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\aguarde.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\aguarde.Designer.cs">
-      <DependentUpon>aguarde.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cadastro.cs">
       <SubType>Form</SubType>
@@ -86,9 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\aguarde.resx">
-      <DependentUpon>aguarde.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>

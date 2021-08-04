@@ -39,15 +39,88 @@ namespace NFe_SeniorSistemas.Forms
 
                     nfeProc nota = (nfeProc)xml.Deserialize(xmlReader);
 
-                    MontaTelas(nota);
+                    MontaTelasEmitente(nota);
                     MontaTelasDestinatario(nota);
                     MontaTelasProdutos(nota);
+                    MontaTelasTotais(nota);
+                    MontaTelasInfAdicional(nota);
                 }
             }
             catch (Exception erro)
             {
                 MessageBox.Show(erro.StackTrace + Environment.NewLine + erro.Message);
             }
+        }
+
+        private void MontaTelasInfAdicional(nfeProc nota)
+        {
+            txtModFrete.Text = FormataFrete(nota.NFe.infNFe.transp.modFrete);
+
+            txtIndFormPgmto.Text = FormataIndCobranca(nota.NFe.infNFe.pag.detPag.indPag);
+            txtMeioPgmto.Text = FormataMeioPgmto(nota.NFe.infNFe.pag.detPag.tPag);
+            txtVlrPgmto.Text = Convert.ToString(nota.NFe.infNFe.pag.detPag.vPag);
+
+            txtFisco.Text = nota.NFe.infNFe.infAdic.infAdFisco;
+            txtCompl.Text = nota.NFe.infNFe.infAdic.infCpl;
+        }
+
+        private string FormataMeioPgmto(byte tPag)
+        {
+            if (tPag == 3)
+            {
+                return "3 - Cartão de Crédito";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        private string FormataIndCobranca(byte indPag)
+        {
+            if (indPag == 1)
+            {
+                return "1 - Pagamento a prazo";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        private string FormataFrete(byte modFrete)
+        {
+            if (modFrete == 0)
+            {
+                return "0 - Contratação do Frete por Conta do Remetente";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        private void MontaTelasTotais(nfeProc nota)
+        {
+            txtBaseICMS.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vBC);
+            txtICMS.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vICMS);
+            txtICMSDesonerado.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vICMSDeson);
+            txtFCP.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vFCPUFDest);
+            txtICMSRemetente.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vICMSUFRemet);
+            txtICMSDestino.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vICMSUFDest);
+            txtBaseCalcICMSST.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vBCST);
+            txtICMSFCP.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vFCP);
+            txtFrete.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vFrete);
+            txtSeguro.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vSeg);
+            txtDescontos.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vDesc);
+            txtIPI.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vIPI);
+            txtIPIDevolvido.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vIPIDevol);
+            txtPIS.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vPIS);
+            txtCOFINS.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vCOFINS);
+            txtOutrasDespesas.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vOutro);
+            txtAproxTributos.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vTotTrib);
+            txtTotNfe.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vNF);
+            TxtTotProdutos.Text = Convert.ToString(nota.NFe.infNFe.total.ICMSTot.vProd);
         }
 
         private void MontaTelasProdutos(nfeProc nota)
@@ -58,7 +131,7 @@ namespace NFe_SeniorSistemas.Forms
             }
         }
 
-        private void MontaTelas(nfeProc nota)
+        private void MontaTelasEmitente(nfeProc nota)
         {
             txtEmitNome.Text = FormataString(nota.NFe.infNFe.emit.xNome);
             txtEmitNomeF.Text = FormataString(nota.NFe.infNFe.emit.xFant);
@@ -71,7 +144,7 @@ namespace NFe_SeniorSistemas.Forms
 
                 txtEmitEnd.Text = FormataString(enderecoEmitente.end);
                 txtEmitBairro.Text = FormataString(enderecoEmitente.bairro);
-                txtEmitCEP.Text = FormataString(enderecoEmitente.cep);
+                txtEmitCEP.Text = FormataCep(enderecoEmitente.cep);
                 txtEmitMun.Text = FormataString(enderecoEmitente.cidade);
                 txtEmitUF.Text = enderecoEmitente.uf;
                 txtEmitPais.Text = FormataPais(nota.NFe.infNFe.emit.enderEmit.cPais);
@@ -83,12 +156,17 @@ namespace NFe_SeniorSistemas.Forms
             txtEmitCdRegTrib.Text = Convert.ToString(nota.NFe.infNFe.emit.CRT);
         }
 
+        private string FormataCep(string cep)
+        {
+            return Convert.ToUInt64(cep).ToString(@"00000\-000");
+        }
+
         private void MontaTelasDestinatario(nfeProc nota)
         {
             txtDestNome.Text = FormataString(nota.NFe.infNFe.dest.xNome);
             txtDestCPF.Text = FormataCPF(nota.NFe.infNFe.dest.CPF);
             txtDestEmail.Text = nota.NFe.infNFe.dest.xEmail;
-            txtDestTel.Text = Convert.ToString(nota.NFe.infNFe.dest.enderDest.fone);
+            txtDestTel.Text = FormataCelular(nota.NFe.infNFe.dest.enderDest.fone);
             txtDestIndIE.Text = FormataIEDest(nota.NFe.infNFe.dest.indIEDest);
             using (var correios = new WsCorreios.AtendeClienteClient())
             {
@@ -96,13 +174,18 @@ namespace NFe_SeniorSistemas.Forms
 
                 txtDestEnd.Text = FormataString(enderecoDestinatario.end);
                 txtDestBairro.Text = FormataString(enderecoDestinatario.bairro);
-                txtDestCEp.Text = FormataString(enderecoDestinatario.cep);
+                txtDestCEp.Text = FormataCep(enderecoDestinatario.cep);
                 txtDestNumero.Text = Convert.ToString(nota.NFe.infNFe.dest.enderDest.nro);
                 txtDestMun.Text = FormataString(enderecoDestinatario.cidade);
                 txtDestUF.Text = enderecoDestinatario.uf;
                 txtDestPais.Text = FormataPais(nota.NFe.infNFe.dest.enderDest.cPais);
                 txtDestComplemento.Text = nota.NFe.infNFe.dest.enderDest.xCpl;
             }
+        }
+
+        private string FormataCelular(ulong fone)
+        {
+           return Convert.ToUInt64(fone).ToString(@"(00)\ 00000-0000");
         }
 
         private string FormataCPF(ulong cPF)
@@ -135,7 +218,7 @@ namespace NFe_SeniorSistemas.Forms
             }
             else
             {
-                return "Não Informado";
+                return "";
             }
         }
 
@@ -147,6 +230,12 @@ namespace NFe_SeniorSistemas.Forms
         private void tbEmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login frmlogin = new Login();
+            frmlogin.Show();
         }
     }
 }
